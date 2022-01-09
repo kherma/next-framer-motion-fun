@@ -19,9 +19,8 @@ const Footer = () => {
         ))}
         <EmailClipboard />
       </div>
-      <div className="flex gap-2 justify-center items-center w-full h-16 font-bold uppercase xl:h-20 paper">
-        <p>Kamil Herma</p>
-        <p>&copy; 2022</p>
+      <div className="flex justify-center items-center w-full h-16 font-bold uppercase xl:h-20 paper">
+        <p>Kamil Herma &copy; 2022</p>
       </div>
     </footer>
   );
