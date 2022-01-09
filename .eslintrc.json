@@ -7,6 +7,7 @@
   "rules": {
     "no-unused-vars": "error",
     "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-custom-classname": "off",
     "tailwindcss/enforces-shorthand": "warn",
     "tailwindcss/no-contradicting-classname": "error"
   }
