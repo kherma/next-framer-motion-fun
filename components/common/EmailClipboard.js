@@ -45,7 +45,7 @@ const EmailClipboard = () => {
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className="flex relative justify-center items-center w-full h-full md:w-40 md:h-auto xl:w-48 paper"
+      className="flex relative justify-center items-center w-full md:w-40 xl:w-48 paper"
       onClick={handleClick}
     >
       <motion.div animate={animateEnvelope} transition={transitionEnvelope}>

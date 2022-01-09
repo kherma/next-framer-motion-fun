@@ -11,7 +11,7 @@ const Layout = ({ children, pageTitle }) => {
   const open = () => setIsModalOpen(true);
   const close = () => setIsModalOpen(false);
   return (
-    <div className="p-4 w-screen h-screen bg-gray-200 xl:p-8">
+    <div className="flex flex-col gap-4 p-4 w-screen h-screen bg-gray-200 xl:gap-8 xl:p-8">
       <Head>
         <title>{pagesMetaData[pageTitle].title}</title>
         <meta
@@ -27,7 +27,7 @@ const Layout = ({ children, pageTitle }) => {
         <Header toogleModal={() => (isModalOpen ? close() : open())} />
         <Footer />
       </div>
-      <main>{children}</main>
+      <main className="w-full h-full paper">{children}</main>
     </div>
   );
 };

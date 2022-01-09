@@ -16,7 +16,7 @@ const InfoButton = ({ toogleModal }) => {
       transition={transition}
       className="flex justify-center items-center w-full md:hidden paper"
     >
-      <AiOutlineInfoCircle className="p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 xl:w-20 xl:h-20" />
+      <AiOutlineInfoCircle className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
     </motion.button>
   );
 };

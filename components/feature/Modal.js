@@ -20,7 +20,7 @@ const Modal = ({ handleClose }) => {
           animate={modal.animate}
           exit={modal.exit}
         >
-          <div className="flex gap-2 justify-between items-center w-full">
+          <div className="flex gap-4 justify-between items-center w-full sm:gap-10">
             {innerData.map((linkName) => (
               <ExternalLink
                 key={uuidv4()}
@@ -30,7 +30,7 @@ const Modal = ({ handleClose }) => {
             ))}
           </div>
           <EmailClipboard />
-          <div className="flex justify-center items-center w-full h-32 text-xl font-bold uppercase sm:h-36 sm:text-2xl paper">
+          <div className="flex justify-center items-center w-full h-24 text-xl font-bold uppercase sm:text-2xl paper">
             <p>Kamil Herma &copy; 2022</p>
           </div>
         </motion.div>
