@@ -3,9 +3,10 @@ import { links } from "../../utils/config";
 
 const EmailClipboard = () => {
   const { link, Icon } = links.email;
+
   return (
     <button
-      className="flex justify-center items-center w-48 paper"
+      className="flex justify-center items-center w-48 hover:text-white hover:bg-bgViolet-100 transition-colors duration-300 paper"
       onClick={() => {
         navigator.clipboard.writeText(link);
       }}
