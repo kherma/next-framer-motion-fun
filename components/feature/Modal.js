@@ -1,46 +1,20 @@
 import React from "react";
 import Backdrop from "../feature/Backdrop";
 import { motion } from "framer-motion";
-
-const dropIn = {
-  hidden: {
-    y: "-10vh",
-    opacity: 0,
-  },
-  visible: {
-    y: "0",
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-      type: "spring",
-      damping: 25,
-      stiffness: 500,
-    },
-  },
-  exit: {
-    y: "10vh",
-    opacity: 0,
-  },
-};
+import { modal } from "../../utils/animations";
 
 const Modal = ({ handleClose }) => {
   return (
     <Backdrop onClick={handleClose}>
-      <div className="p-5 w-80 h-80 bg-[#ffffff23] rounded-xl">
+      <div className="p-5 w-80 h-80 bg-[#ffffff23] rounded-xl sm:w-96 sm:h-96">
         <motion.div
           onClick={(e) => e.stopPropagation()}
           className="flex flex-col items-center px-8 m-auto w-full h-full rounded-xl paper"
-          variants={dropIn}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          initial={modal.initial}
+          animate={modal.animate}
+          exit={modal.exit}
           drag
-          dragConstraints={{
-            top: -20,
-            left: -20,
-            right: 20,
-            bottom: 20,
-          }}
+          dragConstraints={modal.dragConstraints}
         ></motion.div>
       </div>
     </Backdrop>
