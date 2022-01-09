@@ -8,7 +8,7 @@ const innerData = ["linkedin", "website"];
 
 const Footer = () => {
   return (
-    <footer className="flex gap-8 justify-center items-center w-full">
+    <footer className="hidden gap-8 justify-center items-center w-full sm:flex">
       <div className="flex gap-8 justify-between items-center">
         {innerData.map((linkName) => (
           <ExternalLink
@@ -19,7 +19,7 @@ const Footer = () => {
         ))}
         <EmailClipboard />
       </div>
-      <div className="flex gap-2 justify-center items-center p-8 w-full font-bold uppercase paper">
+      <div className="flex gap-2 justify-center items-center w-full h-20 font-bold uppercase paper">
         <p>Kamil Herma</p>
         <p>&copy; 2022</p>
       </div>

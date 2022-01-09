@@ -22,6 +22,10 @@ module.exports = {
           100: "#885FDD",
           200: "#A881F6",
         },
+        bgGreen: {
+          100: "#5CDB69",
+          200: "#28ED3D",
+        },
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
