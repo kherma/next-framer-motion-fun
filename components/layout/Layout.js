@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { pagesMetaData } from "../../utils/config";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Layout = ({ children, pageTitle }) => {
   return (
@@ -14,7 +15,10 @@ const Layout = ({ children, pageTitle }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <div className="flex gap-8 justify-between items-center">
+        <Header />
+        <Footer />
+      </div>
       <main>{children}</main>
     </div>
   );

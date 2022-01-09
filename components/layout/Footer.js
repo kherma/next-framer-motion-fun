@@ -1,0 +1,30 @@
+import React from "react";
+import ExternalLink from "../common/ExternalLink";
+import EmailClipboard from "../common/EmailClipboard";
+import { links } from "../../utils/config";
+import { v4 as uuidv4 } from "uuid";
+
+const innerData = ["linkedin", "website"];
+
+const Footer = () => {
+  return (
+    <footer className="flex gap-8 justify-center items-center w-full">
+      <div className="flex gap-8 justify-between items-center">
+        {innerData.map((linkName) => (
+          <ExternalLink
+            key={uuidv4()}
+            link={links[linkName].link}
+            Icon={links[linkName].Icon}
+          />
+        ))}
+        <EmailClipboard />
+      </div>
+      <div className="flex gap-2 justify-center items-center p-8 w-full font-bold uppercase paper">
+        <p>Kamil Herma</p>
+        <p>&copy; 2022</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
