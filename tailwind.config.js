@@ -23,6 +23,9 @@ module.exports = {
           200: "#A881F6",
         },
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
