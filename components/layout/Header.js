@@ -6,7 +6,7 @@ import InfoButton from "../common/InfoButton";
 
 const Header = () => {
   return (
-    <header className="flex gap-8 justify-between items-center">
+    <header className="flex gap-4 justify-between items-center w-full md:w-auto xl:gap-8">
       <HomeLink />
       <ExternalLink link={links.github.link} Icon={links.github.Icon} />
       <InfoButton />
