@@ -45,11 +45,11 @@ const EmailClipboard = () => {
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className="flex relative justify-center items-center w-40 xl:w-48 paper"
+      className="flex relative justify-center items-center w-full h-full md:w-40 md:h-auto xl:w-48 paper"
       onClick={handleClick}
     >
       <motion.div animate={animateEnvelope} transition={transitionEnvelope}>
-        <Icon className="p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 xl:w-20 xl:h-20" />
+        <Icon className="p-4 w-20 h-20 sm:w-24 sm:h-24 md:w-16 md:h-16 xl:w-20 xl:h-20" />
       </motion.div>
       {isActive && (
         <motion.div
@@ -57,13 +57,13 @@ const EmailClipboard = () => {
           animate={headerCheckAnimation.animate}
           transition={headerCheckAnimation.transition}
         >
-          <AiOutlineCheckCircle className="p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 xl:w-20 xl:h-20" />
+          <AiOutlineCheckCircle className="p-4 w-20 h-20 sm:w-24 sm:h-24 md:w-16 md:h-16 xl:w-20 xl:h-20" />
         </motion.div>
       )}
 
       {isActive && (
         <motion.p
-          className="absolute right-8 font-black uppercase"
+          className="absolute right-20 font-black uppercase sm:text-2xl md:right-8 md:text-base"
           initial={headerCopytextAnimation.initial}
           animate={headerCopytextAnimation.animate}
           transition={headerCopytextAnimation.transition}

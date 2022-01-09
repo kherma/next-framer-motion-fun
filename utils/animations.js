@@ -85,10 +85,4 @@ export const modal = {
     y: "10vh",
     opacity: 0,
   },
-  dragConstraints: {
-    top: -20,
-    left: -20,
-    right: 20,
-    bottom: 20,
-  },
 };
