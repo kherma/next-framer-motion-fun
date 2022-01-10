@@ -9,6 +9,7 @@ const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const open = () => setIsModalOpen(true);
   const close = () => setIsModalOpen(false);
+
   return (
     <div className="flex flex-col gap-4 p-4 w-screen h-screen bg-gray-200 lg:gap-8 lg:p-8">
       <Head>
@@ -23,7 +24,9 @@ const Layout = ({ children, pageTitle }) => {
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
-      <main className="w-full h-full paper">{children}</main>
+      <main className="flex justify-center items-center w-full h-full text-5xl text-center paper">
+        {children}
+      </main>
     </div>
   );
 };

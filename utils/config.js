@@ -66,5 +66,5 @@ export const links = {
     link: "https://kherma.github.io/",
     Icon: CgWebsite,
   },
-  navLinks: ["/planet", "/vorp", "/letter", "/fizzbuzz", "/cheatsheet"],
+  navLinks: ["/", "/planet", "/vorp", "/letter", "/fizzbuzz", "/cheatsheet"],
 };
