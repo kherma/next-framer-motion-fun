@@ -18,7 +18,7 @@ const HomeLink = () => {
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className={`paper w-full md:w-auto flex justify-center items-center ${
+      className={`paper w-full flex justify-center items-center ${
         isActive && "bg-bgRed-100 text-white"
       }`}
     >

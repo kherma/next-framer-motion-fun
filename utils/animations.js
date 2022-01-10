@@ -40,20 +40,19 @@ export const headerEnvelopeAnimation = (isActive) => {
 };
 
 export const headerCheckAnimation = {
-  initial: { opacity: 0, display: "none" },
+  initial: { opacity: 0 },
   animate: {
     rotate: [-360, 0, 0],
     opacity: [0, 1, 1],
-    display: "block",
-    x: [-40, -40, -80],
+    x: -50,
   },
   transition: { duration: 1.5, delay: 1 },
 };
+
 export const headerCopytextAnimation = {
-  initial: { opacity: 0, display: "none" },
+  initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    display: "block",
   },
   transition: {
     duration: 0.5,
@@ -66,6 +65,7 @@ export const backdrop = {
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
+
 export const modal = {
   initial: {
     y: "-10vh",

@@ -15,9 +15,9 @@ const CodeLink = ({ link, Icon }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="flex justify-center items-center w-full md:w-auto paper"
+      className="flex justify-center items-center w-full paper"
     >
-      <Icon className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
+      <Icon className="p-4 w-20 h-20 sm:w-28 sm:h-28" />
     </motion.a>
   );
 };

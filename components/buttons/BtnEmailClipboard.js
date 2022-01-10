@@ -11,7 +11,10 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const EmailClipboard = () => {
   const [isActive, setIsActive] = useState(false);
+  const activateAnimatio = useRef(true);
+
   const { link, Icon } = links.email;
+
   const { whileHover, whileTap, transition } = btnScaleWithColor(
     "#885FDD",
     false
@@ -19,7 +22,6 @@ const EmailClipboard = () => {
   const { animate: animateEnvelope, transition: transitionEnvelope } =
     headerEnvelopeAnimation(isActive);
 
-  const activateAnimatio = useRef(true);
   useEffect(() => {
     if (activateAnimatio.current) {
       activateAnimatio.current = false;
@@ -45,31 +47,29 @@ const EmailClipboard = () => {
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className="flex relative justify-center items-center w-full md:w-40 xl:w-48 paper"
+      className="flex relative justify-center items-center w-full h-full paper"
       onClick={handleClick}
     >
       <motion.div animate={animateEnvelope} transition={transitionEnvelope}>
-        <Icon className="p-4 w-20 h-20 sm:w-24 sm:h-24 md:w-16 md:h-16 xl:w-20 xl:h-20" />
+        <Icon className="p-4 w-20 h-20 sm:w-28 sm:h-28" />
       </motion.div>
       {isActive && (
         <motion.div
+          className="absolute"
           initial={headerCheckAnimation.initial}
           animate={headerCheckAnimation.animate}
           transition={headerCheckAnimation.transition}
         >
-          <AiOutlineCheckCircle className="p-4 w-20 h-20 sm:w-24 sm:h-24 md:w-16 md:h-16 xl:w-20 xl:h-20" />
+          <motion.p
+            className="absolute top-1/2 -right-3/4 font-black uppercase -translate-y-1/2 sm:text-2xl"
+            initial={headerCopytextAnimation.initial}
+            animate={headerCopytextAnimation.animate}
+            transition={headerCopytextAnimation.transition}
+          >
+            copied!
+          </motion.p>
+          <AiOutlineCheckCircle className="p-4 w-20 h-20 sm:w-28 sm:h-28" />
         </motion.div>
-      )}
-
-      {isActive && (
-        <motion.p
-          className="absolute right-20 font-black uppercase sm:text-2xl md:right-8 md:text-base"
-          initial={headerCopytextAnimation.initial}
-          animate={headerCopytextAnimation.animate}
-          transition={headerCopytextAnimation.transition}
-        >
-          copied!
-        </motion.p>
       )}
     </motion.button>
   );
