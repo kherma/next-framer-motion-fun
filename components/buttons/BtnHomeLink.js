@@ -12,11 +12,11 @@ const HomeLink = () => {
   const { whileHover, whileTap, transition } = btnScale(isActive);
 
   return (
-    <motion.nav
+    <motion.div
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className={`paper w-full flex justify-center items-center xl:hover:bg-bgRed-100 xl:hover:text-white transition-colors duration-300 ${
+      className={`paper w-1/3 flex justify-center items-center xl:hover:bg-bgRed-100 xl:hover:text-white transition-colors duration-300 ${
         isActive ? "bg-bgRed-100 text-white" : "bg-white"
       }`}
     >
@@ -29,7 +29,7 @@ const HomeLink = () => {
           <Icon className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
         </a>
       </Link>
-    </motion.nav>
+    </motion.div>
   );
 };
 
