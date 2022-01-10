@@ -1,13 +1,9 @@
-export const btnScaleWithColor = (color, isActive) => {
+export const btnScale = (isActive) => {
   return {
     whileHover: {
-      backgroundColor: color,
-      color: "#fff",
-      scale: isActive ? 1 : 1.05,
+      scale: isActive ? 1 : 1.03,
     },
     whileTap: {
-      backgroundColor: color,
-      color: "#fff",
       scale: isActive ? 1 : 0.95,
     },
     transition: {

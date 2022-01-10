@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { links } from "../../utils/config";
 import { motion } from "framer-motion";
 import {
-  btnScaleWithColor,
   headerEnvelopeAnimation,
   headerCheckAnimation,
   headerCopytextAnimation,
+  btnScale,
 } from "../../utils/animations";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
@@ -15,10 +15,7 @@ const EmailClipboard = () => {
 
   const { link, Icon } = links.email;
 
-  const { whileHover, whileTap, transition } = btnScaleWithColor(
-    "#885FDD",
-    false
-  );
+  const { whileHover, whileTap, transition } = btnScale(isActive);
   const { animate: animateEnvelope, transition: transitionEnvelope } =
     headerEnvelopeAnimation(isActive);
 
@@ -47,7 +44,9 @@ const EmailClipboard = () => {
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className="flex relative justify-center items-center w-full h-full paper"
+      className={`flex relative justify-center items-center w-full h-full text-white hover:text-white bg-bgViolet-100 hover:bg-bgViolet-100 transition-colors duration-300 xl:text-black xl:bg-white paper ${
+        isActive && "xl:bg-bgViolet-100 xl:text-white xl:cursor-default"
+      }`}
       onClick={handleClick}
     >
       <motion.div animate={animateEnvelope} transition={transitionEnvelope}>

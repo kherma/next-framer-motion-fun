@@ -3,23 +3,21 @@ import Link from "next/link";
 import { links } from "../../utils/config";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { btnScaleWithColor } from "../../utils/animations";
+import { btnScale } from "../../utils/animations";
 
 const HomeLink = () => {
   const { link, Icon } = links.home;
   const router = useRouter();
   const isActive = router.pathname === link;
-  const { whileHover, whileTap, transition } = btnScaleWithColor(
-    "#DB4676",
-    isActive
-  );
+  const { whileHover, whileTap, transition } = btnScale(isActive);
+
   return (
     <motion.nav
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
-      className={`paper w-full flex justify-center items-center ${
-        isActive && "bg-bgRed-100 text-white"
+      className={`paper w-full flex justify-center items-center xl:hover:bg-bgRed-100 xl:hover:text-white transition-colors duration-300 ${
+        isActive ? "bg-bgRed-100 text-white" : "bg-white"
       }`}
     >
       <Link href={link}>
