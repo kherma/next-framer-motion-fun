@@ -1,14 +1,15 @@
 import React from "react";
-import HomeLink from "../common/HomeLink";
-import ExternalLink from "../common/ExternalLink";
-import { links } from "../../utils/config";
-import InfoButton from "../common/InfoButton";
+import HomeLink from "../buttons/BtnHomeLink";
+import InfoButton from "../buttons/BtnInfo";
+import PagePagination from "../feature/PagePagination";
 
 const Header = ({ toogleModal }) => {
   return (
-    <header className="flex gap-4 justify-between items-center w-full md:w-auto xl:gap-8">
-      <HomeLink />
-      <ExternalLink link={links.github.link} Icon={links.github.Icon} />
+    <header className="flex gap-4 justify-between items-center w-full lg:gap-8">
+      <nav className="flex gap-4 justify-between items-center w-full lg:gap-8">
+        <HomeLink />
+        <PagePagination />
+      </nav>
       <InfoButton toogleModal={toogleModal} />
     </header>
   );

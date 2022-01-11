@@ -1,13 +1,9 @@
-export const btnScaleWithColor = (color, isActive) => {
+export const btnScale = (isActive) => {
   return {
     whileHover: {
-      backgroundColor: color,
-      color: "#fff",
-      scale: isActive ? 1 : 1.05,
+      scale: isActive ? 1 : 1.03,
     },
     whileTap: {
-      backgroundColor: color,
-      color: "#fff",
       scale: isActive ? 1 : 0.95,
     },
     transition: {
@@ -40,20 +36,19 @@ export const headerEnvelopeAnimation = (isActive) => {
 };
 
 export const headerCheckAnimation = {
-  initial: { opacity: 0, display: "none" },
+  initial: { opacity: 0 },
   animate: {
     rotate: [-360, 0, 0],
     opacity: [0, 1, 1],
-    display: "block",
-    x: [-40, -40, -80],
+    x: -50,
   },
   transition: { duration: 1.5, delay: 1 },
 };
+
 export const headerCopytextAnimation = {
-  initial: { opacity: 0, display: "none" },
+  initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    display: "block",
   },
   transition: {
     duration: 0.5,
@@ -66,6 +61,7 @@ export const backdrop = {
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
+
 export const modal = {
   initial: {
     y: "-10vh",
@@ -84,5 +80,24 @@ export const modal = {
   exit: {
     y: "10vh",
     opacity: 0,
+  },
+};
+
+export const page = {
+  initial: {
+    scale: 1.1,
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+      damping: 100,
+      stiffness: 500,
+    },
   },
 };

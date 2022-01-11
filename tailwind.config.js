@@ -26,6 +26,10 @@ module.exports = {
           100: "#5CDB69",
           200: "#28ED3D",
         },
+        bgBluelight: {
+          100: "#30B6DB",
+          200: "#258CA8",
+        },
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
