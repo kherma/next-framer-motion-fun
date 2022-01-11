@@ -3,7 +3,8 @@ import Head from "next/head";
 import { pagesMetaData } from "../../utils/config";
 import Header from "./Header";
 import Modal from "../feature/Modal";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { page } from "../../utils/animations";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,8 +25,14 @@ const Layout = ({ children, pageTitle }) => {
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
-      <main className="flex justify-center items-center w-full h-full text-5xl text-center paper">
-        {children}
+      <main className="w-full h-full paper">
+        <motion.div
+          initial={page.initial}
+          animate={page.animate}
+          className="w-full h-full"
+        >
+          {children}
+        </motion.div>
       </main>
     </div>
   );
