@@ -12,7 +12,7 @@ const Layout = ({ children, pageTitle }) => {
   const close = () => setIsModalOpen(false);
 
   return (
-    <div className="flex flex-col gap-4 p-4 w-screen h-screen bg-gray-200 lg:gap-8 lg:p-8">
+    <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 lg:h-screen">
       <Head>
         <title>{pagesMetaData[pageTitle].title}</title>
         <meta
@@ -25,7 +25,7 @@ const Layout = ({ children, pageTitle }) => {
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
-      <main className="w-full h-full paper">
+      <main className="mt-28 w-full h-full sm:mt-32 lg:mt-0 paper">
         <motion.div
           initial={page.initial}
           animate={page.animate}

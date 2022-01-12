@@ -1,12 +1,13 @@
 import { HiOutlineHome, HiOutlineCode, HiOutlineMail } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
+import { SiNextdotjs, SiFramer, SiTailwindcss } from "react-icons/si";
 
 // ****************
-// CONFIG
+// UTILS
 // *********
 
-const titlePart = "| Have Fun";
+const titlePart = "| PATCHWORK";
 
 // ****************
 // META DATA
@@ -66,5 +67,19 @@ export const links = {
     link: "https://kherma.github.io/",
     Icon: CgWebsite,
   },
+  techStack: [
+    {
+      link: "https://nextjs.org/",
+      Icon: SiNextdotjs,
+    },
+    {
+      link: "https://www.framer.com/motion/",
+      Icon: SiFramer,
+    },
+    {
+      link: "https://tailwindcss.com/",
+      Icon: SiTailwindcss,
+    },
+  ],
   navLinks: ["/", "/planet", "/vorp", "/letter", "/fizzbuzz", "/cheatsheet"],
 };
