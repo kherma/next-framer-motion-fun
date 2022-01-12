@@ -31,7 +31,7 @@ const Layout = ({ children, pageTitle }) => {
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
       <Header handleOpen={open} />
-      <main className="w-full h-full paper">
+      <main className="w-full min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-10rem)] lg:min-h-[calc(100vh-11rem)] paper">
         <motion.div
           initial={page.initial}
           animate={page.animate}
