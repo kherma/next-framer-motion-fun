@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Backdrop from "../feature/Backdrop";
 import { motion } from "framer-motion";
 import { modal } from "../../utils/animations";
@@ -8,6 +8,10 @@ import Footer from "../layout/Footer";
 import BtnCloseModal from "../buttons/BtnCloseModal";
 
 const Modal = ({ handleClose }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    // return (document.body.style.overflow = "unset");
+  }, []);
   return (
     <Backdrop onClick={handleClose}>
       <div

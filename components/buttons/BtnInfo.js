@@ -3,12 +3,12 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { btnScale } from "../../utils/animations";
 
-const InfoButton = ({ toogleModal }) => {
+const InfoButton = ({ handleOpen }) => {
   const { whileHover, whileTap, transition } = btnScale(false);
 
   return (
     <motion.button
-      onClick={toogleModal}
+      onClick={handleOpen}
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}

@@ -5,7 +5,7 @@ import { backdrop } from "../../utils/animations";
 const Backdrop = ({ children, onClick }) => {
   return (
     <motion.div
-      className="flex absolute top-0 left-0 z-50 justify-center items-center w-full h-full bg-gray-900"
+      className="flex fixed top-0 left-0 z-50 justify-center items-center w-full h-full bg-gray-900"
       onClick={onClick}
       initial={backdrop.initial}
       animate={backdrop.animate}

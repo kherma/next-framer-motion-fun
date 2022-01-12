@@ -8,8 +8,14 @@ import { page } from "../../utils/animations";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const open = () => setIsModalOpen(true);
-  const close = () => setIsModalOpen(false);
+  const open = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+  const close = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "unset";
+  };
 
   return (
     <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 lg:h-screen">
@@ -21,10 +27,10 @@ const Layout = ({ children, pageTitle }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header toogleModal={() => (isModalOpen ? close() : open())} />
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
+      <Header handleOpen={open} />
       <main className="mt-28 w-full h-full sm:mt-32 lg:mt-0 paper">
         <motion.div
           initial={page.initial}
