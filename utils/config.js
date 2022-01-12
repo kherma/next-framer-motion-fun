@@ -2,12 +2,51 @@ import { HiOutlineHome, HiOutlineCode, HiOutlineMail } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { SiNextdotjs, SiFramer, SiTailwindcss } from "react-icons/si";
+import {
+  GiStonePile,
+  GiRibbonMedal,
+  GiMedal,
+  GiTrophy,
+  GiLaurelsTrophy,
+  GiDiamondTrophy,
+} from "react-icons/gi";
 
 // ****************
 // UTILS
 // *********
 
 const titlePart = "| PATCHWORK";
+export const badges = [
+  {
+    Icon: GiStonePile,
+    color: "#a8a29e",
+  },
+
+  {
+    Icon: GiRibbonMedal,
+    color: "#a16207",
+  },
+
+  {
+    Icon: GiMedal,
+    color: "#ca8a04",
+  },
+
+  {
+    Icon: GiTrophy,
+    color: "#eab308",
+  },
+
+  {
+    Icon: GiLaurelsTrophy,
+    color: "#fde047",
+  },
+
+  {
+    Icon: GiDiamondTrophy,
+    color: "#38bdf8",
+  },
+];
 
 // ****************
 // META DATA

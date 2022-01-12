@@ -1,8 +1,9 @@
 import React from "react";
 import Logo from "../common/Logo";
+import Line from "../common/Line";
 import HomeMessage from "../feature/HomeMessage";
 import TechStackLinks from "../feature/TechStackLinks";
-import Line from "../common/Line";
+import AchievementsBar from "../feature/AchievementsBar";
 
 const HomeWelcomeSection = () => {
   return (
@@ -11,6 +12,8 @@ const HomeWelcomeSection = () => {
       <HomeMessage />
       <Line />
       <TechStackLinks />
+      <Line />
+      <AchievementsBar />
     </div>
   );
 };

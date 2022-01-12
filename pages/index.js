@@ -5,7 +5,7 @@ import WebsiteMotionDesign from "../components/feature/WebsiteMotionDesign";
 
 const Home = () => (
   <Layout pageTitle="home">
-    <div className="flex overflow-auto flex-col gap-8 py-8 px-4 w-full h-full sm:p-8 xl:flex-row">
+    <div className="flex overflow-auto flex-col gap-20 py-8 px-4 w-full h-full sm:p-8 xl:flex-row">
       <HomeWelcomeSection />
       <WebsiteMotionDesign />
     </div>

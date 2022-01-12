@@ -14,7 +14,7 @@ const TechStackLinks = () => {
       <h2 className="text-4xl font-black text-slate-800 uppercase md:text-5xl">
         Tech stack
       </h2>
-      <div className="flex gap-10 justify-start items-center">
+      <div className="flex gap-10 items-center">
         {techStack.map(({ link, Icon }) => (
           <BtnTechStack href={link} key={uuidv4()}>
             <motion.div
