@@ -14,7 +14,7 @@ const InfoButton = ({ handleOpen }) => {
       transition={transition}
       className="flex justify-center items-center w-full text-white hover:text-white bg-bgGreen-100 hover:bg-bgGreen-100 transition-colors duration-300 xl:text-black xl:bg-white paper"
     >
-      <AiOutlineInfoCircle className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
+      <AiOutlineInfoCircle className="p-4 w-16 h-16 lg:w-20 lg:h-20" />
     </motion.button>
   );
 };

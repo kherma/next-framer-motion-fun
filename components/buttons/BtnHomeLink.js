@@ -26,7 +26,7 @@ const HomeLink = () => {
             isActive && "cursor-default"
           }`}
         >
-          <Icon className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
+          <Icon className="p-4 w-16 h-16 lg:w-20 lg:h-20" />
         </a>
       </Link>
     </motion.div>
