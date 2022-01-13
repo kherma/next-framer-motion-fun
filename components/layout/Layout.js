@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { page } from "../../utils/animations";
-import { config } from "../../utils/config";
+import { pageAnim } from "../../animations/pageAnim";
+import { config } from "../../config/config";
 import Head from "next/head";
 import Header from "./Header";
 import Modal from "./Modal";
@@ -10,17 +10,19 @@ import AchievementMessage from "../common/AchievementMessage";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const titlePart = "| PATCHWORK";
+  const { pagesData } = config;
+
   const open = () => {
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
   };
+
   const close = () => {
     setIsModalOpen(false);
     document.body.style.overflow = "unset";
   };
-  const titlePart = "| PATCHWORK";
 
-  const { pagesData } = config;
   return (
     <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
       <Head>
@@ -41,8 +43,8 @@ const Layout = ({ children, pageTitle }) => {
 
           <div className=" py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
             <motion.div
-              initial={page.initial}
-              animate={page.animate}
+              initial={pageAnim.initial}
+              animate={pageAnim.animate}
               className="flex flex-col gap-8 justify-center items-center w-full h-full"
             >
               <AchievementMessage

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { backdrop, modal } from "../../../utils/animations";
+import { backdropAnim, modalAnim } from "../../../animations/modalMenuAnim";
 import { v4 as uuidv4 } from "uuid";
 
 const innerData = ["rotate-45", "-rotate-45"];
@@ -8,16 +8,16 @@ const innerData = ["rotate-45", "-rotate-45"];
 const ModalWMD = ({ handleClose }) => {
   return (
     <motion.div
-      initial={backdrop.initial}
-      animate={backdrop.animate}
-      exit={backdrop.exit}
+      initial={backdropAnim.initial}
+      animate={backdropAnim.animate}
+      exit={backdropAnim.exit}
       onClick={handleClose}
       className="flex justify-center items-center w-full h-full bg-slate-900 absoltue"
     >
       <motion.div
-        initial={modal.initial}
-        animate={modal.animate}
-        exit={modal.exit}
+        initial={modalAnim.initial}
+        animate={modalAnim.animate}
+        exit={modalAnim.exit}
         onClick={(e) => e.stopPropagation()}
         className="flex relative flex-col gap-4 justify-between items-center p-4 w-2/3 bg-gray-200 rounded-xl md:p-8 xl:w-2/3"
       >

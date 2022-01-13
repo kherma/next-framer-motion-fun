@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import { config } from "../../utils/config";
+import { config } from "../../config/config";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { btnScale } from "../../utils/animations";
+import { btnScaleAnim } from "../../animations/btnScaleAnim";
 
 const BtnHomeLink = () => {
   const { link, Icon } = config.linksData.home;
   const router = useRouter();
   const isActive = router.pathname === link;
-  const { whileHover, whileTap, transition } = btnScale(isActive);
+  const { whileHover, whileTap, transition } = btnScaleAnim(isActive);
 
   return (
     <motion.div

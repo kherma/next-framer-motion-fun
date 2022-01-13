@@ -1,6 +1,6 @@
 import React from "react";
 import BtnExternalLink from "../buttons/BtnExternalLink";
-import { config } from "../../utils/config";
+import { config } from "../../config/config";
 import { v4 as uuidv4 } from "uuid";
 
 const ModalLinksSection = ({ title, innerData, variant }) => {

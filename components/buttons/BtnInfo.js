@@ -1,10 +1,10 @@
 import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { btnScale } from "../../utils/animations";
+import { btnScaleAnim } from "../../animations/btnScaleAnim";
 
 const BtnInfo = ({ handleOpen }) => {
-  const { whileHover, whileTap, transition } = btnScale(false);
+  const { whileHover, whileTap, transition } = btnScaleAnim(false);
 
   return (
     <motion.button

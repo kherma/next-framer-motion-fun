@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { btnScale } from "../../utils/animations";
+import { btnScaleAnim } from "../../animations/btnScaleAnim";
 
 const BtnPageNavigation = ({ href, Icon }) => {
-  const { whileHover, whileTap, transition } = btnScale(false);
+  const { whileHover, whileTap, transition } = btnScaleAnim(false);
 
   return (
     <Link href={href} passHref={true}>
