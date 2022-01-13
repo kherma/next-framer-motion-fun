@@ -5,6 +5,8 @@ import { config } from "../../utils/config";
 import Head from "next/head";
 import Header from "./Header";
 import Modal from "../feature/Modal";
+import PageDescription from "./PageDescription";
+import AchievementMessage from "../common/AchievementMessage";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,12 +19,11 @@ const Layout = ({ children, pageTitle }) => {
     document.body.style.overflow = "unset";
   };
 
-  const { pagesData } = config;
-
+  const { pagesData, titlePart } = config;
   return (
-    <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 lg:h-screen">
+    <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
       <Head>
-        <title>{pagesData[pageTitle].title}</title>
+        <title>{`${pagesData[pageTitle].title} ${titlePart}`}</title>
         <meta name="description" content={pagesData[pageTitle].description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -30,13 +31,26 @@ const Layout = ({ children, pageTitle }) => {
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
       <Header handleOpen={open} />
-      <main className="w-full min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-10rem)] lg:min-h-[calc(100vh-11rem)] paper">
+      <main className="w-full h-full">
         <motion.div
           initial={page.initial}
           animate={page.animate}
           className="w-full h-full"
         >
-          {children}
+          <div className="flex flex-col gap-8 w-full h-full xl:flex-row">
+            <PageDescription
+              title={pagesData[pageTitle].title}
+              message={pagesData[pageTitle].message}
+            />
+            <div className="flex flex-col gap-8 justify-between items-center py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
+              <AchievementMessage
+                achievementDescription={
+                  pagesData[pageTitle].achievementDescription
+                }
+              />
+              {children}
+            </div>
+          </div>
         </motion.div>
       </main>
     </div>
