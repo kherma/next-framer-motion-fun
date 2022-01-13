@@ -85,14 +85,12 @@ export const modal = {
 
 export const page = {
   initial: {
-    scale: 1.03,
+    scale: 1.1,
     opacity: 0,
-    y: 10,
   },
   animate: {
     scale: 1,
     opacity: 1,
-    y: 0,
     transition: {
       duration: 1,
     },

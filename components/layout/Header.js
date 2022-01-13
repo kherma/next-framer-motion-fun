@@ -1,7 +1,7 @@
 import React from "react";
 import BtnHomeLink from "../buttons/BtnHomeLink";
 import BtnInfo from "../buttons/BtnInfo";
-import PagePagination from "../feature/PagePagination";
+import PagePagination from "./PagePagination";
 
 const Header = ({ handleOpen }) => (
   <header className="h-20 sm:h-28 xl:h-20">

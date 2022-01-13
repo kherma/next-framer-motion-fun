@@ -4,7 +4,7 @@ import { page } from "../../utils/animations";
 import { config } from "../../utils/config";
 import Head from "next/head";
 import Header from "./Header";
-import Modal from "../feature/Modal";
+import Modal from "./Modal";
 import PageDescription from "./PageDescription";
 import AchievementMessage from "../common/AchievementMessage";
 
@@ -33,26 +33,27 @@ const Layout = ({ children, pageTitle }) => {
       </AnimatePresence>
       <Header handleOpen={open} />
       <main className="w-full h-full">
-        <motion.div
-          initial={page.initial}
-          animate={page.animate}
-          className="w-full h-full"
-        >
-          <div className="flex flex-col gap-8 w-full h-full xl:flex-row">
-            <PageDescription
-              title={pagesData[pageTitle].title}
-              message={pagesData[pageTitle].message}
-            />
-            <div className="flex flex-col gap-8 justify-center items-center py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
+        <div className="flex flex-col gap-8 w-full h-full xl:flex-row">
+          <PageDescription
+            title={pagesData[pageTitle].title}
+            message={pagesData[pageTitle].message}
+          />
+
+          <div className=" py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
+            <motion.div
+              initial={page.initial}
+              animate={page.animate}
+              className="flex flex-col gap-8 justify-center items-center w-full h-full"
+            >
               <AchievementMessage
                 achievementDescription={
                   pagesData[pageTitle].achievementDescription
                 }
               />
               {children}
-            </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </main>
     </div>
   );
