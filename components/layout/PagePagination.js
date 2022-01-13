@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-import { config } from "../../utils/config";
+import { config } from "../../config/config";
 import BtnPageNavigation from "../buttons/BtnPageNavigation";
 import { useRouter } from "next/router";
 

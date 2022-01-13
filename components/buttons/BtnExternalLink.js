@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { btnScale } from "../../utils/animations";
+import { btnScaleAnim } from "../../animations/btnScaleAnim";
 import clsx from "clsx";
 
 const BtnExternalLink = ({ link, Icon, variant }) => {
-  const { whileHover, whileTap, transition } = btnScale(false);
+  const { whileHover, whileTap, transition } = btnScaleAnim(false);
   return (
     <motion.a
       whileHover={whileHover}

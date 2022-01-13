@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { config } from "../../utils/config";
+import { config } from "../../config/config";
 
 const AchievementsBar = () => {
   const [achievements, setAchievements] = useState({ total: 6, achieved: 0 });

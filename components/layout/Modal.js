@@ -1,11 +1,11 @@
 import React from "react";
 import Backdrop from "./Backdrop";
 import { motion } from "framer-motion";
-import { modal } from "../../utils/animations";
+import { modalAnim } from "../../animations/modalMenuAnim";
 import Footer from "../layout/Footer";
 import BtnCloseModal from "../buttons/BtnCloseModal";
 import ModalLinksSection from "./ModalLinksSection";
-import { config } from "../../utils/config";
+import { config } from "../../config/config";
 
 const Modal = ({ handleClose }) => {
   const { about, techStack } = config.modalData;
@@ -17,9 +17,9 @@ const Modal = ({ handleClose }) => {
       >
         <motion.div
           className="flex flex-col gap-4 justify-between items-center m-auto w-full h-full md:gap-8"
-          initial={modal.initial}
-          animate={modal.animate}
-          exit={modal.exit}
+          initial={modalAnim.initial}
+          animate={modalAnim.animate}
+          exit={modalAnim.exit}
         >
           <BtnCloseModal handleClose={handleClose} />
           <ModalLinksSection
