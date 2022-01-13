@@ -9,7 +9,7 @@ const SearchBarWMD = () => {
       onClick={() => setToggleSearch(!toggleSearch)}
       className="relative h-8 bg-slate-400 rounded-full cursor-pointer"
       animate={{
-        width: toggleSearch ? "300px" : "34px",
+        width: toggleSearch ? "250px" : "34px",
         transition: {
           transition: {
             duration: 0.5,

@@ -1,15 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { backdrop, modal } from "../../../utils/animations";
 import { v4 as uuidv4 } from "uuid";
 
 const innerData = ["rotate-45", "-rotate-45"];
 
 const ModalWMD = ({ handleClose }) => {
   return (
-    <div
+    <motion.div
+      initial={backdrop.initial}
+      animate={backdrop.animate}
+      exit={backdrop.exit}
       onClick={handleClose}
       className="flex justify-center items-center w-full h-full bg-slate-900 absoltue"
     >
-      <div
+      <motion.div
+        initial={modal.initial}
+        animate={modal.animate}
+        exit={modal.exit}
         onClick={(e) => e.stopPropagation()}
         className="flex relative flex-col gap-4 justify-between items-center p-4 w-2/3 bg-gray-200 rounded-xl md:p-8 xl:w-2/3"
       >
@@ -31,8 +39,8 @@ const ModalWMD = ({ handleClose }) => {
         <button className="group w-full h-8 font-black text-center text-white uppercase bg-yellow-400 transition-colors duration-500 sm:h-16 lg:p-4 xl:text-black xl:hover:text-white xl:bg-white xl:hover:bg-yellow-400 m paper">
           achievement
         </button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

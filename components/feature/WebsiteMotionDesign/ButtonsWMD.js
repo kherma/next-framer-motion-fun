@@ -20,6 +20,10 @@ const ButtonsWMD = ({ resizeAnimations, setResizeAnimations }) => {
         onClick={() => toggleAnimation("exit")}
         className="w-4 h-4 bg-red-400 rounded-full cursor-pointer md:w-8 md:h-8"
       />
+      <li
+        onClick={() => toggleAnimation("rotate")}
+        className="w-4 h-4 bg-blue-400 rounded-full cursor-pointer md:w-8 md:h-8"
+      />
     </ul>
   );
 };

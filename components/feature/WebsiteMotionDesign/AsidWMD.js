@@ -13,7 +13,7 @@ const AsidWMD = ({ exit }) => {
           },
         },
       }}
-      className="w-1/3 h-full bg-pink-400 rounded-2xl cursor-pointer"
+      className="w-1/3 h-full bg-pink-400 rounded-2xl"
     />
   );
 };
