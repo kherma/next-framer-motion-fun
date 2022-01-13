@@ -1,12 +1,11 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
+import WebsiteMotionDesign from "../components/feature/WebsiteMotionDesign";
 
-const Home = () => {
-  return (
-    <Layout pageTitle="home">
-      <h1>Hello Home</h1>
-    </Layout>
-  );
-};
+const Home = () => (
+  <Layout pageTitle="home">
+    <WebsiteMotionDesign />
+  </Layout>
+);
 
 export default Home;

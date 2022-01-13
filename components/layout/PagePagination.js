@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-import { links } from "../../utils/config";
+import { config } from "../../utils/config";
 import BtnPageNavigation from "../buttons/BtnPageNavigation";
 import { useRouter } from "next/router";
 
 const PagePagination = () => {
-  const { navLinks } = links;
-  const pagesLength = navLinks.length;
+  const { navLinks } = config.linksData;
+  const pagesLength = config.linksData.navLinks.length;
   const router = useRouter();
   const [next, setNext] = useState(1);
   const [prev, setPrev] = useState(pagesLength - 1);

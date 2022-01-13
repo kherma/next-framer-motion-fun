@@ -1,13 +1,14 @@
 import React from "react";
-import Backdrop from "../feature/Backdrop";
+import Backdrop from "./Backdrop";
 import { motion } from "framer-motion";
 import { modal } from "../../utils/animations";
-import LinksMenu from "../layout/LinksMenu";
-import EmailClipboard from "../buttons/BtnEmailClipboard";
 import Footer from "../layout/Footer";
 import BtnCloseModal from "../buttons/BtnCloseModal";
+import ModalLinksSection from "./ModalLinksSection";
+import { config } from "../../utils/config";
 
 const Modal = ({ handleClose }) => {
+  const { about, techStack } = config.modalData;
   return (
     <Backdrop onClick={handleClose}>
       <div
@@ -21,11 +22,17 @@ const Modal = ({ handleClose }) => {
           exit={modal.exit}
         >
           <BtnCloseModal handleClose={handleClose} />
-          <LinksMenu />
-          <div className="flex flex-col gap-4 w-full md:flex-row md:gap-8">
-            <EmailClipboard />
-            <Footer />
-          </div>
+          <ModalLinksSection
+            innerData={about.links}
+            title={about.title}
+            variant={about.variant}
+          />
+          <ModalLinksSection
+            innerData={techStack.links}
+            title={techStack.title}
+            variant={techStack.variant}
+          />
+          <Footer />
         </motion.div>
       </div>
     </Backdrop>

@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { links } from "../../utils/config";
+import { config } from "../../utils/config";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { btnScale } from "../../utils/animations";
 
-const HomeLink = () => {
-  const { link, Icon } = links.home;
+const BtnHomeLink = () => {
+  const { link, Icon } = config.linksData.home;
   const router = useRouter();
   const isActive = router.pathname === link;
   const { whileHover, whileTap, transition } = btnScale(isActive);
@@ -26,11 +26,11 @@ const HomeLink = () => {
             isActive && "cursor-default"
           }`}
         >
-          <Icon className="p-4 w-16 h-16 xl:w-20 xl:h-20" />
+          <Icon className="p-4 w-16 h-16 lg:w-20 lg:h-20" />
         </a>
       </Link>
     </motion.div>
   );
 };
 
-export default HomeLink;
+export default BtnHomeLink;

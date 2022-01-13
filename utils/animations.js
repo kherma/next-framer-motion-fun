@@ -87,17 +87,12 @@ export const page = {
   initial: {
     scale: 1.1,
     opacity: 0,
-    y: 100,
   },
   animate: {
     scale: 1,
     opacity: 1,
-    y: 0,
     transition: {
       duration: 1,
-      type: "spring",
-      damping: 100,
-      stiffness: 500,
     },
   },
 };
