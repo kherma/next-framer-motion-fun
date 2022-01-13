@@ -8,7 +8,7 @@ const BtnCloseModal = ({ handleClose }) => (
     onClick={handleClose}
     className="group flex gap-[0.4rem] justify-center items-center w-full h-20 sm:gap-3 sm:h-28 paper"
   >
-    <p className="font-black uppercase sm:text-2xl">Click here or outside to</p>
+    <p className="font-black uppercase sm:text-4xl">Click here or outside to</p>
     <div className="relative w-6 h-6 bg-bgRed-100 rounded-md transition-all duration-500 scale-125 sm:w-10 sm:h-10 xl:bg-transparent xl:group-hover:bg-bgRed-100 xl:scale-100 xl:group-hover:scale-125 xl:group-hover:rotate-180">
       {innerData.map((rotate) => (
         <span

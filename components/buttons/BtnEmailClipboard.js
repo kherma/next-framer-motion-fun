@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { links } from "../../utils/config";
 import { motion } from "framer-motion";
 import {
   headerEnvelopeAnimation,
@@ -8,12 +7,13 @@ import {
   btnScale,
 } from "../../utils/animations";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import { config } from "../../utils/config";
 
-const EmailClipboard = () => {
+const BtnEmailClipboard = () => {
   const [isActive, setIsActive] = useState(false);
   const activateAnimatio = useRef(true);
 
-  const { link, Icon } = links.email;
+  const { link, Icon } = config.linksData.email;
 
   const { whileHover, whileTap, transition } = btnScale(isActive);
   const { animate: animateEnvelope, transition: transitionEnvelope } =
@@ -74,4 +74,4 @@ const EmailClipboard = () => {
   );
 };
 
-export default EmailClipboard;
+export default BtnEmailClipboard;

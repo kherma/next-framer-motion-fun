@@ -3,7 +3,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { btnScale } from "../../utils/animations";
 
-const InfoButton = ({ handleOpen }) => {
+const BtnInfo = ({ handleOpen }) => {
   const { whileHover, whileTap, transition } = btnScale(false);
 
   return (
@@ -19,4 +19,4 @@ const InfoButton = ({ handleOpen }) => {
   );
 };
 
-export default InfoButton;
+export default BtnInfo;

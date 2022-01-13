@@ -16,15 +16,6 @@ export const btnScale = (isActive) => {
   };
 };
 
-export const btnRotateScaleBorderRadius = {
-  scale: [1, 1.2, 1.2, 1, 1],
-  rotate: [0, 0, 90, 90, 0],
-  borderRadius: ["20%", "20%", "50%", "50%", "12px"],
-  transition: {
-    duration: 1.5,
-  },
-};
-
 export const headerEnvelopeAnimation = (isActive) => {
   return {
     animate: isActive

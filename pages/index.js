@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import HomeWelcomeSection from "../components/layout/HomeWelcomeSection";
+import PageDescription from "../components/layout/PageDescription";
 import WebsiteMotionDesign from "../components/feature/WebsiteMotionDesign";
 
 const Home = () => (
   <Layout pageTitle="home">
     <div className="flex overflow-auto flex-col gap-20 py-8 px-4 w-full h-full sm:p-8 xl:flex-row">
-      <HomeWelcomeSection />
+      <PageDescription />
       <WebsiteMotionDesign />
     </div>
   </Layout>

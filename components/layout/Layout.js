@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Head from "next/head";
-import { pagesMetaData } from "../../utils/config";
-import Header from "./Header";
-import Modal from "../feature/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { page } from "../../utils/animations";
+import { config } from "../../utils/config";
+import Head from "next/head";
+import Header from "./Header";
+import Modal from "../feature/Modal";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,14 +17,13 @@ const Layout = ({ children, pageTitle }) => {
     document.body.style.overflow = "unset";
   };
 
+  const { pagesData } = config;
+
   return (
     <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 lg:h-screen">
       <Head>
-        <title>{pagesMetaData[pageTitle].title}</title>
-        <meta
-          name="description"
-          content={pagesMetaData[pageTitle].description}
-        />
+        <title>{pagesData[pageTitle].title}</title>
+        <meta name="description" content={pagesData[pageTitle].description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AnimatePresence initial={false} exitBeforeEnter={true}>

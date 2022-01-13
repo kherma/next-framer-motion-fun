@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { btnScale } from "../../utils/animations";
+import clsx from "clsx";
 
-const CodeLink = ({ link, Icon }) => {
+const BtnExternalLink = ({ link, Icon, variant }) => {
   const { whileHover, whileTap, transition } = btnScale(false);
   return (
     <motion.a
@@ -12,11 +13,15 @@ const CodeLink = ({ link, Icon }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="flex justify-center items-center w-full text-white hover:text-white bg-bgBlue-100 hover:bg-bgBlue-100 transition-colors duration-300 xl:text-black xl:bg-white paper"
+      className={clsx(
+        "flex justify-center items-center w-full text-white hover:text-white transition-colors duration-300 xl:text-black xl:bg-white paper",
+        variant === "btnBlue" && "bg-bgBlue-100 hover:bg-bgBlue-100",
+        variant === "btnTeal" && "bg-teal-500 hover:bg-teal-500"
+      )}
     >
-      <Icon className="p-4 w-20 h-20 sm:w-28 sm:h-28" />
+      <Icon className="p-4 w-16 h-16 sm:w-28 sm:h-28" />
     </motion.a>
   );
 };
 
-export default CodeLink;
+export default BtnExternalLink;

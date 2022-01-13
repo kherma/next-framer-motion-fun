@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeMessage = () => (
+const Message = () => (
   <p className="text-xl font-normal text-center text-slate-600 md:w-4/5 lg:text-2xl">
     Welcome to the world of cool, weird and funny projects that I decided to put
     together because I had too many repositories and I wanted to try Next.JS and
@@ -8,4 +8,4 @@ const HomeMessage = () => (
   </p>
 );
 
-export default HomeMessage;
+export default Message;

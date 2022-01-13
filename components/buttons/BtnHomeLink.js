@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { links } from "../../utils/config";
+import { config } from "../../utils/config";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { btnScale } from "../../utils/animations";
 
-const HomeLink = () => {
-  const { link, Icon } = links.home;
+const BtnHomeLink = () => {
+  const { link, Icon } = config.linksData.home;
   const router = useRouter();
   const isActive = router.pathname === link;
   const { whileHover, whileTap, transition } = btnScale(isActive);
@@ -33,4 +33,4 @@ const HomeLink = () => {
   );
 };
 
-export default HomeLink;
+export default BtnHomeLink;
