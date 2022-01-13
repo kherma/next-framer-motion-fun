@@ -12,7 +12,7 @@ const WebsiteMotionDesign = () => {
   const { whileHover, whileTap, transition } = btnScale(false);
   return (
     <div className="flex justify-center items-center w-full">
-      <div className="flex overflow-hidden flex-col w-72 h-72 bg-slate-200 rounded-3xl shadow-md md:w-full md:h-[40rem] xl:w-[40rem]">
+      <div className="flex overflow-hidden flex-col w-72 h-72 bg-slate-200 rounded-3xl shadow-md md:w-[37rem] md:h-[37rem]">
         <div className="flex items-center p-4 w-full h-[15%] bg-slate-500 md:px-8">
           <div className="flex gap-4 w-full">
             {innerData.buttons.map((color) => (

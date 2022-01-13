@@ -2,11 +2,11 @@ import React from "react";
 
 const AchievementMessage = ({ achievementDescription }) => {
   return (
-    <div className="text-center">
-      <h3 className="mr-2 text-2xl font-semibold text-slate-800 uppercase lg:text-3xl">
-        To get achievement
+    <div className="flex flex-col gap-4 justify-center items-center text-center">
+      <h3 className="text-2xl font-black text-slate-800 uppercase md:text-5xl">
+        achievement
       </h3>
-      <p className="text-xl text-slate-600 uppercase lg:text-2xl">
+      <p className="w-full text-xl text-slate-600 uppercase md:text-3xl">
         {achievementDescription}
       </p>
     </div>

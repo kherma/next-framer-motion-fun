@@ -43,7 +43,7 @@ const Layout = ({ children, pageTitle }) => {
               title={pagesData[pageTitle].title}
               message={pagesData[pageTitle].message}
             />
-            <div className="flex flex-col gap-8 justify-between items-center py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
+            <div className="flex flex-col gap-8 justify-center items-center py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
               <AchievementMessage
                 achievementDescription={
                   pagesData[pageTitle].achievementDescription

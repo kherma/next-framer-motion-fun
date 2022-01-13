@@ -85,9 +85,9 @@ export const modal = {
 
 export const page = {
   initial: {
-    scale: 1.1,
+    scale: 1.03,
     opacity: 0,
-    y: 100,
+    y: 10,
   },
   animate: {
     scale: 1,
@@ -95,9 +95,6 @@ export const page = {
     y: 0,
     transition: {
       duration: 1,
-      type: "spring",
-      damping: 100,
-      stiffness: 500,
     },
   },
 };

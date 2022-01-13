@@ -15,7 +15,7 @@ const AchievementsBar = () => {
   return (
     <div className="flex flex-col gap-8 justify-center items-center w-full ">
       <h2 className="text-4xl font-black text-slate-800 uppercase md:text-5xl">
-        Achievements
+        badges
       </h2>
       <div className="relative p-2 w-full h-12 bg-slate-500 rounded-full">
         <div
