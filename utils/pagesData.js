@@ -1,5 +1,3 @@
-export const titlePart = "| PATCHWORK";
-
 export const pagesData = {
   home: {
     title: "Home",

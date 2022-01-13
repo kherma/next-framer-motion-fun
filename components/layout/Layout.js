@@ -18,8 +18,9 @@ const Layout = ({ children, pageTitle }) => {
     setIsModalOpen(false);
     document.body.style.overflow = "unset";
   };
+  const titlePart = "| PATCHWORK";
 
-  const { pagesData, titlePart } = config;
+  const { pagesData } = config;
   return (
     <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
       <Head>
