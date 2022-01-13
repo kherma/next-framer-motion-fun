@@ -3,6 +3,7 @@ import React from "react";
 const ButtonsWMD = ({ resizeAnimations, setResizeAnimations }) => {
   const toggleAnimation = (variant) => {
     const newState = { ...resizeAnimations };
+    Object.keys(newState).forEach((key) => (newState[key] = false));
     newState[variant] = !resizeAnimations[variant];
     setResizeAnimations((prevState) => ({ ...prevState, ...newState }));
   };
