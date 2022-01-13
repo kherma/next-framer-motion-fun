@@ -3,8 +3,8 @@ import { AnimatePresence } from "framer-motion";
 import ButtonsWMD from "./ButtonsWMD";
 import SearchBarWMD from "./SearchBarWMD";
 import BoxesWMD from "./BoxesWMD";
-import AsidWMD from "./AsidWMD";
-import ParagraphWMD from "./ParagraphWMD";
+import FooterWMD from "./FooterWMD";
+import ParagraphsWMD from "./ParagraphsWMD";
 import ModalWMD from "./ModalWMD";
 
 const WebsiteMotionDesign = () => {
@@ -36,10 +36,11 @@ const WebsiteMotionDesign = () => {
             scale={resizeAnimations.scale}
             minimize={resizeAnimations.minimize}
           />
-          <div className="flex gap-4 justify-between w-full h-2/3 md:gap-8">
-            <AsidWMD exit={resizeAnimations.exit} />
-            <ParagraphWMD handleOpen={open} rotate={resizeAnimations.rotate} />
-          </div>
+          <ParagraphsWMD
+            exit={resizeAnimations.exit}
+            rotate={resizeAnimations.rotate}
+          />
+          <FooterWMD handleOpen={open} />
         </div>
       </div>
     </div>

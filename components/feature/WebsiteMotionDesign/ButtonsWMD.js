@@ -11,15 +11,15 @@ const ButtonsWMD = ({ resizeAnimations, setResizeAnimations }) => {
     <ul className="flex gap-4 w-full">
       <li
         onClick={() => toggleAnimation("scale")}
-        className="w-4 h-4 bg-green-300 rounded-full cursor-pointer md:w-8 md:h-8"
+        className="w-4 h-4 bg-teal-400 rounded-full cursor-pointer md:w-8 md:h-8"
       />
       <li
         onClick={() => toggleAnimation("minimize")}
-        className="w-4 h-4 bg-yellow-300 rounded-full cursor-pointer md:w-8 md:h-8"
+        className="w-4 h-4 bg-orange-300 rounded-full cursor-pointer md:w-8 md:h-8"
       />
       <li
         onClick={() => toggleAnimation("exit")}
-        className="w-4 h-4 bg-red-400 rounded-full cursor-pointer md:w-8 md:h-8"
+        className="w-4 h-4 bg-bgRed-200 rounded-full cursor-pointer md:w-8 md:h-8"
       />
       <li
         onClick={() => toggleAnimation("rotate")}
