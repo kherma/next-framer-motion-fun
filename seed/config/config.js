@@ -3,6 +3,7 @@ import { colorSchemes } from "./colorSchemes";
 
 const data = {
   name: "",
+  size: "",
 };
 
 const view = {

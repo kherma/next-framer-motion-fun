@@ -30,35 +30,6 @@ class Planet {
     };
   }
 
-  generateSize() {
-    const sizeChances = this.random(1, 10);
-
-    const setSize = (text, value) => {
-      this.data.size = text;
-      this.settings.numberSize = value;
-      this.styles.planet.transform = `scale(${
-        value === 100 ? 1 : `0.${value}`
-      })`;
-    };
-
-    switch (true) {
-      case sizeChances < 3:
-        setSize("small", this.random(16, 30));
-        break;
-      case sizeChances > 2 && sizeChances < 7:
-        setSize("medium", this.random(33, 66));
-        break;
-      case sizeChances > 6 && sizeChances < 10:
-        setSize("large", this.random(70, 83));
-        break;
-      case sizeChances > 9:
-        setSize("huge", this.random(86, 100));
-        break;
-      default:
-        break;
-    }
-  }
-
   generateDistanceFromSun() {
     this.data.distanceFromSun = this.random(30, 3000);
   }
