@@ -1,3 +1,5 @@
+import { randomRange } from "../utils/randomRange";
+
 export const generateDistanceFromSun = (config) => {
-  return;
+  config.data.distanceFromSun = randomRange(30, 3000);
 };

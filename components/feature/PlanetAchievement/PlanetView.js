@@ -4,7 +4,7 @@ const PlanetView = () => {
   return (
     <div className="flex justify-center items-center rounded-2xl planetContainer">
       <div className="w-72 h-72">
-        <div className="relative w-full h-full scale-[50%]">
+        <div className="relative w-full h-full">
           <ul className="fogGroup">
             {[...Array(12)].map(() => (
               <li key={uuidv4()} className="fog" />

@@ -30,10 +30,6 @@ class Planet {
     };
   }
 
-  generateDistanceFromSun() {
-    this.data.distanceFromSun = this.random(30, 3000);
-  }
-
   generateAtmosphere() {
     const atmosphereLayers = [
       "troposphere",
