@@ -1,10 +1,13 @@
 import { letters } from "./letters";
+import { atmosphereLayers } from "./atmosphereLayers";
 import { colorSchemes } from "./colorSchemes";
 
 const data = {
   name: "",
   size: "",
   distanceFromSun: 0,
+  atmosphere: [],
+  ozoneLayer: false,
 };
 
 const view = {
@@ -14,6 +17,7 @@ const view = {
 
 const settings = {
   letters,
+  atmosphereLayers,
   colorSchemes,
 };
 
