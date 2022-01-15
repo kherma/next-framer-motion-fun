@@ -1,4 +1,4 @@
-export const atmosphereLayers = [
+export const atmosphereOptions = [
   "troposphere",
   "stratosphere",
   "mesosphere",

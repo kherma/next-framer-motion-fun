@@ -1,4 +1,4 @@
-export const colorSchemes = {
+export const colorOptions = {
   cold: [
     ["#D0F2F2", "#CCD6D9", "#A7C1D9", "#7B89A6", "#484959"],
     ["#CEF2E8", "#8AABBF", "#2C4373", "#2A2C59", "#111226"],
