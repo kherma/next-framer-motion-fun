@@ -1,66 +1,4 @@
 // class Planet {
-//   constructor() {
-//     this.data = {
-//       name: "",
-//       size: "",
-//       distanceFromSun: 0,
-//       atmosphere: [],
-//       ozoneLayer: false,
-//       temperature: "",
-//       population: 0,
-//       description: "",
-//     };
-
-//     this.settings = {
-//       gradinetType: "",
-//       numberOfColors: 0,
-//       colorString: "",
-//       palette: {},
-//       atmosphereBase: 0.4,
-//       borderStyle: "",
-//       numberSize: 0,
-//     };
-
-//     this.styles = {
-//       planet: {},
-//       rings: {
-//         show: false,
-//       },
-//     };
-//   }
-
-//   generateDescription() {
-//     const { name, size, distanceFromSun, temperature, atmosphere, population } =
-//       this.data;
-//     const options = {
-//       temperature: [
-//         "it has great potential for resource extraction",
-//         "mining resources on the planet will be very difficult or almost impossible",
-//       ],
-//       atmosphere: [
-//         "there is no potential for terraformation in the future",
-//         "and there is a lot of oxygen in it",
-//         "it has potential for terraformation in the future",
-//       ],
-//       population: [
-//         `the planet is inhabited by ${population} M of unexplored creatures`,
-//         "the planet is uninhabited",
-//       ],
-//     };
-
-//     this.data.description = `${name} is a ${size} planet. It is located ${distanceFromSun} milion miles from its star. The average temperature is ${temperature} degrees Celsius and because of that ${
-//       temperature > -100 && temperature < 61
-//         ? options.temperature[0]
-//         : options.temperature[1]
-//     }. The atmosphere has ${atmosphere.length} layers so ${
-//       atmosphere.length < 3
-//         ? options.atmosphere[0]
-//         : population
-//         ? options.atmosphere[1]
-//         : options.atmosphere[2]
-//     }. Finally ${population ? options.population[0] : options.population[1]}.`;
-//   }
-
 //   RenderPlanet() {
 //     const { cold, warm, etheric, ethericCold } = colorSchemes;
 //     switch (true) {
@@ -161,9 +99,7 @@
 //   }
 
 //   generatePlanet() {
-//     this.generateDescription();
 //     this.RenderPlanet();
 //     this.RenderAtmosphere();
-//     this.RenderRings();
 //   }
 // }

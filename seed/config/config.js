@@ -4,6 +4,7 @@ import { colorSchemes } from "./colorSchemes";
 
 const data = {
   name: "",
+  description: "",
   size: "",
   distanceFromSun: 0,
   atmosphere: [],
