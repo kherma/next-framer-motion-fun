@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
+import PlanetAchievement from "../components/feature/PlanetAchievement";
 
 const Planet = () => {
   return (
     <Layout pageTitle="planet">
-      <h1>Hello Planet</h1>
+      <PlanetAchievement />
     </Layout>
   );
 };
