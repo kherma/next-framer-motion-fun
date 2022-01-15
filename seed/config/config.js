@@ -9,6 +9,7 @@ const data = {
   atmosphere: [],
   ozoneLayer: false,
   temperature: 0,
+  population: 0,
 };
 
 const view = {

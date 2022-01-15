@@ -1,9 +1,7 @@
 import { randomRange } from "../utils/randomRange";
 
 export const generateTemperature = (config) => {
-  const atmosphere = config.data.atmosphere;
-  const ozoneLayer = config.data.ozoneLayer;
-  const distanceFromSun = config.data.distanceFromSun;
+  const { atmosphere, ozoneLayer, distanceFromSun } = config.data;
 
   if (distanceFromSun <= 1000 && atmosphere.includes("troposphere")) {
     config.data.temperature = randomRange(100, 200);
