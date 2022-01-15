@@ -8,6 +8,7 @@ const data = {
   distanceFromSun: 0,
   atmosphere: [],
   ozoneLayer: false,
+  temperature: 0,
 };
 
 const view = {

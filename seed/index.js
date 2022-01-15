@@ -5,5 +5,4 @@ import { renderPlanet } from "./view";
 export const generatePlanet = () => {
   generateData(config);
   renderPlanet(config);
-  console.log(config);
 };

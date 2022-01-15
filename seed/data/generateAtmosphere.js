@@ -6,7 +6,7 @@ export const generateAtmosphere = (config) => {
     settings: { atmosphereLayers },
   } = config;
 
-  if (distanceFromSun < 1000) {
+  if (distanceFromSun <= 1000) {
     config.data.atmosphere.push(
       randomRange(1, 3) < 2 ? atmosphereLayers[0] : atmosphereLayers[4]
     );

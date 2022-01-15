@@ -30,32 +30,6 @@ class Planet {
     };
   }
 
-  generateTemperature() {
-    const atmosphere = this.data.atmosphere;
-    const ozone = this.data.ozoneLayer;
-    const distance = this.data.distanceFromSun;
-
-    if (distance < 100 && atmosphere.includes("troposphere")) {
-      this.data.temperature = this.random(100, 200);
-    }
-
-    if (distance < 100 && atmosphere.includes("exosphere")) {
-      this.data.temperature = this.random(300, 500);
-    }
-
-    if (distance >= 100 && distance <= 200 && !ozone) {
-      this.data.temperature = this.random(-100, 60);
-    }
-
-    if (distance >= 100 && distance <= 200 && ozone) {
-      this.data.temperature = this.random(10, 30);
-    }
-
-    if (distance > 200) {
-      this.data.temperature = this.random(-200, 0);
-    }
-  }
-
   generatePopulation() {
     const size = this.data.size;
     const ozone = this.data.ozoneLayer;
