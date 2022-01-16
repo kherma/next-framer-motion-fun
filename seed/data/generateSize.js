@@ -5,7 +5,7 @@ export const generateSize = (state) => {
 
   const setSize = (text, value) => {
     state.data.size = text;
-    state.view.size = `scale(${value === 100 ? 1 : `0.${value}`})`;
+    state.view.container = `scale(${value === 100 ? 1 : `0.${value}`})`;
   };
 
   switch (true) {

@@ -22,7 +22,10 @@ const PlanetAchievement = () => {
         description={planet.data.description}
         handleGeneratePlanet={handleGeneratePlanet}
       />
-      <PlanetView />
+      <PlanetView
+        container={planet.view.container}
+        planet={planet.view.planet}
+      />
       <PlanetData
         size={planet.data.size}
         distanceFromSun={planet.data.distanceFromSun}

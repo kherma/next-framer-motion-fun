@@ -16,7 +16,7 @@ const data = {
 
 const view = {
   container: "",
-  planet: "",
+  planet: {},
 };
 
 const settings = {
