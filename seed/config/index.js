@@ -20,6 +20,7 @@ const view = {
 };
 
 const settings = {
+  atmosphereBase: 0.2,
   lettersOptions,
   atmosphereOptions,
   descriptionOptions,

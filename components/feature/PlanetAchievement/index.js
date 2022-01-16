@@ -3,6 +3,7 @@ import PlanetView from "./PlanetView";
 import PlanetData from "./PlanetData";
 import PlanetAtmosphere from "./PlanetAtmosphere";
 import PlanetDescription from "./PlanetDescription";
+import LoadingPlaceholder from "../../common/LoadingPlaceholder";
 import { generatePlanet } from "../../../seed";
 
 const PlanetAchievement = () => {
@@ -22,17 +23,32 @@ const PlanetAchievement = () => {
         description={planet.data.description}
         handleGeneratePlanet={handleGeneratePlanet}
       />
-      <PlanetView
-        container={planet.view.container}
-        planet={planet.view.planet}
-      />
-      <PlanetData
-        size={planet.data.size}
-        distanceFromSun={planet.data.distanceFromSun}
-        temperature={planet.data.temperature}
-        population={planet.data.population}
-      />
-      <PlanetAtmosphere atmosphere={planet.data.atmosphere} />
+      {planet.view.planet && planet.view.container ? (
+        <PlanetView
+          container={planet.view.container}
+          planet={planet.view.planet}
+        />
+      ) : (
+        <LoadingPlaceholder variant="planet" />
+      )}
+      {planet.data.size &&
+      planet.data.distanceFromSun &&
+      planet.data.temperature !== undefined &&
+      planet.data.population !== undefined ? (
+        <PlanetData
+          size={planet.data.size}
+          distanceFromSun={planet.data.distanceFromSun}
+          temperature={planet.data.temperature}
+          population={planet.data.population}
+        />
+      ) : (
+        <LoadingPlaceholder variant="settings" />
+      )}
+      {planet.data.atmosphere ? (
+        <PlanetAtmosphere atmosphere={planet.data.atmosphere} />
+      ) : (
+        <LoadingPlaceholder variant="layers" />
+      )}
     </div>
   );
 };

@@ -50,7 +50,7 @@ export const generateAtmosphere = (state) => {
         atmosphere.push(atmosphereOptions[0]);
         break;
       case randomLayers > 2 && randomLayers < 5:
-        atmosphere.push(atmosphereOptions[4]);
+        atmosphere.push(atmosphereOptions[5]);
         break;
       case randomLayers > 4 && randomLayers < 8:
         atmosphere.push(

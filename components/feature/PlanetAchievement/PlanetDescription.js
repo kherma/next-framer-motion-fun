@@ -16,7 +16,7 @@ const PlanetDescription = ({ description, name, handleGeneratePlanet }) => {
       <div className="flex justify-between items-center">
         <button
           onClick={handleCounte}
-          className="p-4 w-1/2 font-black hover:tracking-widest text-center text-white uppercase bg-black transition-all duration-300"
+          className="p-4 w-1/2 font-black hover:tracking-widest text-center text-yellow-400 uppercase bg-black transition-all duration-300"
         >
           explore
         </button>
@@ -28,19 +28,21 @@ const PlanetDescription = ({ description, name, handleGeneratePlanet }) => {
             <div className="absolute right-0 bottom-0 w-4 h-4 bg-black" />
           </div>
         ) : (
-          <button className="p-4 w-1/2 font-black text-center text-white uppercase bg-yellow-400 transition-colors duration-300 xl:text-black xl:hover:text-white xl:bg-white xl:hover:bg-yellow-400">
+          <button className="relative p-4 w-1/2 h-full font-black text-center text-white uppercase bg-yellow-400 transition-colors duration-300 xl:text-black xl:hover:text-white xl:bg-white xl:hover:bg-yellow-400">
             achievement
+            <div className="absolute top-0 left-0 w-4 h-4 bg-black" />
+            <div className="absolute right-0 bottom-0 w-4 h-4 bg-black" />
           </button>
         )}
       </div>
-      <div className="flex justify-center items-center w-full h-full">
+      <div className="flex justify-center items-center w-full h-full text-white bg-black">
         {description ? (
-          <div className="flex flex-col gap-2 justify-center items-end p-2 w-full h-full">
+          <div className="flex flex-col gap-2 justify-center items-end px-4 w-full h-full">
             <h3 className="text-xl font-black text-right">{name}</h3>
             <p className="text-justify">{description}</p>
           </div>
         ) : (
-          <p className="text-7xl font-bold">?</p>
+          <p className="text-xl font-bold uppercase">Explore new planets.</p>
         )}
       </div>
     </div>
