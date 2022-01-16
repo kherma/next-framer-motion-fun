@@ -3,7 +3,12 @@ import { generateData } from "./data";
 import { renderPlanet } from "./view";
 
 export const generatePlanet = () => {
-  generateData(config);
-  renderPlanet(config);
-  return { data: config.data, view: config.view };
+  const state = {
+    ...config,
+    data: { ...config.data, atmosphere: [...config.data.atmosphere] },
+    view: { ...config.view },
+  };
+  generateData(state);
+  renderPlanet(state);
+  return { data: state.data, view: state.view };
 };
