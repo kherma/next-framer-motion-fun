@@ -23,7 +23,12 @@ const PlanetAchievement = () => {
         handleGeneratePlanet={handleGeneratePlanet}
       />
       <PlanetView />
-      <PlanetData />
+      <PlanetData
+        size={planet.data.size}
+        distanceFromSun={planet.data.distanceFromSun}
+        temperature={planet.data.temperature}
+        population={planet.data.population}
+      />
       <PlanetAtmosphere atmosphere={planet.data.atmosphere} />
     </div>
   );
