@@ -6,12 +6,12 @@ import { generateTemperature } from "./generateTemperature";
 import { generatePopulation } from "./generatePopulation";
 import { generateDescription } from "./generateDescription";
 
-export const generateData = (config) => {
-  generateName(config);
-  generateSize(config);
-  generateDistanceFromSun(config);
-  generateAtmosphere(config);
-  generateTemperature(config);
-  generatePopulation(config);
-  generateDescription(config);
+export const generateData = (state) => {
+  generateName(state);
+  generateSize(state);
+  generateDistanceFromSun(state);
+  generateAtmosphere(state);
+  generateTemperature(state);
+  generatePopulation(state);
+  generateDescription(state);
 };

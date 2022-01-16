@@ -1,3 +1,3 @@
-export const renderBody = (config) => {
+export const renderBody = (state) => {
   return;
 };

@@ -1,7 +1,7 @@
 import { randomRange } from "../utils/randomRange";
 
-export const generateName = (config) => {
-  const { lettersOptions } = config.settings;
+export const generateName = (state) => {
+  const { lettersOptions } = state.settings;
   let name = "";
 
   for (let i = 0; i < 12; i++) {
@@ -22,5 +22,5 @@ export const generateName = (config) => {
       name += lettersOptions[randomRange(0, lettersOptions.length - 1)];
     }
   }
-  config.data.name = name;
+  state.data.name = name;
 };

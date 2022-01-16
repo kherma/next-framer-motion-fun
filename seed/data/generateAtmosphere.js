@@ -1,35 +1,42 @@
 import { randomRange } from "../utils/randomRange";
 
-export const generateAtmosphere = (config) => {
+export const generateAtmosphere = (state) => {
   const {
     data: { distanceFromSun },
     settings: { atmosphereOptions },
-  } = config;
+  } = state;
 
   const atmosphere = [];
+  let ozoneLayer = false;
 
   if (distanceFromSun <= 1000) {
     atmosphere.push(
-      randomRange(1, 3) < 2 ? atmosphereOptions[0] : atmosphereOptions[4]
+      randomRange(1, 3) < 2 ? atmosphereOptions[0] : atmosphereOptions[5]
     );
   }
 
   if (distanceFromSun > 1000 && distanceFromSun <= 1500) {
     const chancesOfLive = randomRange(1, 10);
     switch (true) {
-      case chancesOfLive < 4:
+      case chancesOfLive <= 4:
+        atmosphere.push(
+          atmosphereOptions[0],
+          atmosphereOptions[3],
+          atmosphereOptions[5]
+        );
+        break;
+      case chancesOfLive > 4 && chancesOfLive <= 8:
         atmosphere.push(
           atmosphereOptions[0],
           atmosphereOptions[2],
-          atmosphereOptions[4]
+          atmosphereOptions[3],
+          atmosphereOptions[4],
+          atmosphereOptions[5]
         );
         break;
-      case chancesOfLive > 4 && chancesOfLive < 7:
+      case chancesOfLive > 8:
         atmosphere.push(...atmosphereOptions);
-        break;
-      case chancesOfLive > 7:
-        atmosphere.push(...atmosphereOptions);
-        config.data.ozoneLayer = true;
+        ozoneLayer = true;
         break;
       default:
         return;
@@ -48,17 +55,24 @@ export const generateAtmosphere = (config) => {
       case randomLayers > 4 && randomLayers < 8:
         atmosphere.push(
           atmosphereOptions[0],
-          atmosphereOptions[2],
-          atmosphereOptions[4]
+          atmosphereOptions[3],
+          atmosphereOptions[5]
         );
         break;
       case randomLayers > 7:
-        atmosphere.push(...atmosphereOptions);
+        atmosphere.push(
+          atmosphereOptions[0],
+          atmosphereOptions[2],
+          atmosphereOptions[3],
+          atmosphereOptions[4],
+          atmosphereOptions[5]
+        );
         break;
       default:
         return;
     }
   }
 
-  config.data.atmosphere = atmosphere;
+  state.data.atmosphere = atmosphere;
+  state.data.ozoneLayer = ozoneLayer;
 };

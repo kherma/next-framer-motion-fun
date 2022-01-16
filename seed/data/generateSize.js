@@ -1,11 +1,11 @@
 import { randomRange } from "../utils/randomRange";
 
-export const generateSize = (config) => {
+export const generateSize = (state) => {
   const randomSize = randomRange(1, 9);
 
   const setSize = (text, value) => {
-    config.data.size = text;
-    config.view.size = `scale(${value === 100 ? 1 : `0.${value}`})`;
+    state.data.size = text;
+    state.view.size = `scale(${value === 100 ? 1 : `0.${value}`})`;
   };
 
   switch (true) {

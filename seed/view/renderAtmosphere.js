@@ -1,3 +1,3 @@
-export const renderAtmosphere = (config) => {
+export const renderAtmosphere = (state) => {
   return;
 };

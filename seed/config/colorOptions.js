@@ -47,12 +47,4 @@ export const colorOptions = {
     ["#FFDC99", "#FFCB7B", "#FFBE6C", "#FFB252", "#FFAD30"],
     ["#FFEFAE", "#FFD7AE", "#FFB6AE", "#FFAECB", "#FFA8F3"],
   ],
-  atmosphere: [
-    "#20b8cd",
-    "#00a4bb",
-    "#017397",
-    "#013d62",
-    "#171129",
-    "#64def9",
-  ],
 };
