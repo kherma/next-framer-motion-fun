@@ -11,7 +11,7 @@ export const pagesData = {
     title: "Planet",
     description: "Random planet generator build with CSS and JavaScript.",
     message: "",
-    achievementDescription: "Generate planet with population",
+    achievementDescription: "Explore at least 5 planets",
   },
   vorp: {
     title: "Vorp",

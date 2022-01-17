@@ -22,6 +22,7 @@ const PlanetDescription = ({
       <div className="flex justify-between items-center">
         <PlanetDescriptionBtnExplore
           handleGeneratePlanet={handleGeneratePlanet}
+          loading={loading}
         />
         {count < 5 ? (
           <PlanetDescriptionCounter count={count} />
