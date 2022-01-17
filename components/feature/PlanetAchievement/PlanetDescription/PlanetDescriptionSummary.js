@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const PlanetDescriptionSummary = ({ description, name }) => {
   return (
-    <div className="flex justify-center items-center w-full h-full text-white bg-black">
+    <div className="flex justify-center items-center w-full h-full">
       <AnimatePresence>
         {description && name && (
           <motion.div
