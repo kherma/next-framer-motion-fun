@@ -18,19 +18,6 @@ $primary-yellow-3: #b6942e;
 $primary-yellow-4: #8b7123;
 $primary-red-1: #d94f30;
 
-.bgDistanceFromSun {
-  background-image: radial-gradient(
-      circle at -50% 50%,
-      $primary-yellow-2 35%,
-      $primary-yellow-2 45%,
-      $primary-red-1 45%,
-      $primary-red-1 50%,
-      transparent 50%
-    ),
-    radial-gradient(circle at 85% 50%, #fff 4%, transparent 5%);
-  background-repeat: no-repeat;
-}
-
 .planetContainer {
   background-color: #090820;
   background-image: radial-gradient(

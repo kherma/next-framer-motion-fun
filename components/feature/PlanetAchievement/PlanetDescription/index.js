@@ -16,7 +16,7 @@ const PlanetDescription = ({ description, name, handleGeneratePlanet }) => {
   };
 
   return (
-    <div className="flex overflow-hidden flex-col h-[21rem] rounded-2xl md:h-[22rem] lg:h-auto">
+    <div className="flex overflow-hidden flex-col h-[21rem] rounded-2xl md:h-[22rem] lg:h-80 xl:h-auto">
       <div className="flex justify-between items-center">
         <PlanetDescriptionBtnExplore handleCount={handleCount} />
         {count < 5 ? (

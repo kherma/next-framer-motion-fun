@@ -4,9 +4,9 @@ const PlanetDescriptionBtnExplore = ({ handleCount }) => {
   return (
     <button
       onClick={handleCount}
-      className="p-4 w-1/2 font-black hover:tracking-widest text-center text-white uppercase bg-black transition-all duration-300"
+      className="p-4 w-1/2 font-black text-center text-white uppercase bg-red-600 transition-all duration-300 xl:hover:tracking-widest"
     >
-      <div>explore</div>
+      <p>explore</p>
     </button>
   );
 };
