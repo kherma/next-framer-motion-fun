@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { temperatureAnim } from "../../../../animations/planetPageAnim/planetDataAnim";
 
 const PlanetDataTemperature = ({ temperature }) => {
   const handleBgColor = (temperature) => {
@@ -7,21 +8,16 @@ const PlanetDataTemperature = ({ temperature }) => {
     if (temperature >= 0 && temperature <= 60) return "#fbbf24";
     if (temperature < 0) return "#06b6d4";
   };
+  const { initial, animate, exit, transition } = temperatureAnim;
   return (
     <div className="flex justify-center items-center p-4 font-black text-white uppercase bg-black">
       <AnimatePresence>
         {temperature !== undefined && (
           <motion.p
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            exit={{ scaleX: 0, opacity: 0 }}
-            transition={{
-              scaleX: {
-                delay: 0.3,
-              },
-              duration: 0.8,
-              type: "spring",
-            }}
+            initial={initial}
+            animate={animate}
+            exit={exit}
+            transition={transition}
             style={{ backgroundColor: handleBgColor(temperature) }}
             className="p-4 w-full text-2xl text-center rounded-2xl lg:text-3xl"
           >

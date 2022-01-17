@@ -1,20 +1,19 @@
 import React from "react";
 import { CgArrowsHAlt } from "react-icons/cg";
 import { AnimatePresence, motion } from "framer-motion";
+import { distanceAnim } from "../../../../animations/planetPageAnim/planetDataAnim";
 
 const PlanetDataDistance = ({ distanceFromSun }) => {
+  const { initial, animate, exit, transition } = distanceAnim;
   return (
     <div className="flex overflow-hidden flex-col justify-center items-center font-black text-white uppercase bg-black">
       <AnimatePresence>
         {distanceFromSun && (
           <motion.div
-            initial={{ scale: 8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-            transition={{
-              duration: 0.7,
-              type: "spring",
-            }}
+            initial={initial}
+            animate={animate}
+            exit={exit}
+            transition={transition}
             className="flex relative flex-col items-center ml-3"
           >
             <p>{distanceFromSun} m</p>

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { btnExploreAnim } from "../../../../animations/planetPageAnim/planetDescriptionAnim";
+import { v4 as uuidv4 } from "uuid";
 
 const PlanetDescriptionBtnExplore = ({ handleGeneratePlanet, loading }) => {
   return (
@@ -9,31 +11,16 @@ const PlanetDescriptionBtnExplore = ({ handleGeneratePlanet, loading }) => {
     >
       {!loading && <p className="font-black text-white uppercase">explore</p>}
       {loading && (
-        <div className="flex gap-4 justify-between items-center m-2 h-full">
-          <motion.div
-            animate={{ scaleY: [1, 2, 1] }}
-            transition={{
-              duration: 0.4,
-            }}
-            className="w-2 h-2 bg-white "
-          />
-          <motion.div
-            animate={{ scaleY: [1, 2, 1] }}
-            transition={{
-              duration: 0.4,
-              delay: 0.4,
-            }}
-            className="w-2 h-2 bg-white"
-          />
-          <motion.div
-            animate={{ scaleY: [1, 2, 1] }}
-            transition={{
-              duration: 0.4,
-              delay: 0.8,
-            }}
-            className="w-2 h-2 bg-white"
-          />
-        </div>
+        <ul className="flex gap-4 justify-between items-center m-2 h-full">
+          {btnExploreAnim.map(({ animate, transition }) => (
+            <motion.li
+              key={uuidv4()}
+              animate={animate}
+              transition={transition}
+              className="w-2 h-2 bg-white"
+            />
+          ))}
+        </ul>
       )}
     </button>
   );

@@ -1,23 +1,19 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { AnimatePresence, motion } from "framer-motion";
+import { planetViewAnim } from "../../../animations/planetPageAnim/planetViewAnim";
 
 const PlanetView = ({ container, planet }) => {
+  const { initial, animate, exit, transition } = planetViewAnim;
   return (
     <div className="overflow-hidden rounded-2xl planetContainer">
       <AnimatePresence>
         {container && planet && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.1 }}
-            transition={{
-              scale: {
-                delay: 0.3,
-              },
-              duration: 2,
-              type: "spring",
-            }}
+            initial={initial}
+            animate={animate}
+            exit={exit}
+            transition={transition}
             className="flex justify-center items-center w-full h-full"
           >
             <div className="w-72 h-72">

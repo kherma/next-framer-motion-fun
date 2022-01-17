@@ -3,28 +3,34 @@ import { motion } from "framer-motion";
 import { BsFillGearFill } from "react-icons/bs";
 import { IoPlanet } from "react-icons/io5";
 import { WiBarometer } from "react-icons/wi";
+import {
+  placeholderEntryAnim,
+  viewPlaceholderAnim,
+  dataPlaceholderAnim,
+  atmospherePlaceholderAnim,
+} from "../../animations/planetPageAnim/planetPlaceholderAnim";
 
 const LoadingPlaceholder = ({ variant, loading }) => {
+  const { animate: animateEntry } = placeholderEntryAnim;
+  const {
+    initial: viewInitial,
+    animate: viewAnimate,
+    transition: viewTransition,
+  } = viewPlaceholderAnim(loading);
+  const { animate: dataAnimate, transition: dataTransition } =
+    dataPlaceholderAnim(loading);
+  const { animate: atmosphereAnimate, transition: atmosphereTransition } =
+    atmospherePlaceholderAnim(loading);
   return (
     <motion.div
-      animate={{ scale: [0.5, 1] }}
+      animate={animateEntry}
       className="flex justify-center items-center w-full h-full text-white bg-black rounded-2xl"
     >
       {variant === "view" && (
         <motion.div
-          initial={{
-            rotate: -30,
-          }}
-          animate={{
-            rotate: loading ? [-60, 0, -60, 0] : -30,
-            opacity: loading ? 0 : 1,
-          }}
-          transition={{
-            duration: 0.9,
-            opacity: {
-              delay: 0.7,
-            },
-          }}
+          initial={viewInitial}
+          animate={viewAnimate}
+          transition={viewTransition}
           className="text-9xl"
         >
           <IoPlanet />
@@ -32,16 +38,8 @@ const LoadingPlaceholder = ({ variant, loading }) => {
       )}
       {variant === "data" && (
         <motion.div
-          animate={{
-            rotate: loading ? 360 : 0,
-            opacity: loading ? 0 : 1,
-          }}
-          transition={{
-            duration: 0.9,
-            opacity: {
-              delay: 0.7,
-            },
-          }}
+          animate={dataAnimate}
+          transition={dataTransition}
           className="text-9xl"
         >
           <BsFillGearFill />
@@ -49,16 +47,8 @@ const LoadingPlaceholder = ({ variant, loading }) => {
       )}
       {variant === "atmosphere" && (
         <motion.div
-          animate={{
-            scale: loading ? [0.9, 1.1, 0.9, 1.1] : 1,
-            opacity: loading ? 0 : 1,
-          }}
-          transition={{
-            duration: 0.9,
-            opacity: {
-              delay: 0.7,
-            },
-          }}
+          animate={atmosphereAnimate}
+          transition={atmosphereTransition}
           className="text-[12rem]"
         >
           <WiBarometer />
