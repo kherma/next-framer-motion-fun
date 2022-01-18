@@ -19,7 +19,7 @@ const PlanetDataTemperature = ({ temperature }) => {
             exit={exit}
             transition={transition}
             style={{ backgroundColor: handleBgColor(temperature) }}
-            className="p-4 w-full text-2xl text-center rounded-2xl lg:text-3xl"
+            className="p-4 w-full text-2xl text-center rounded-2xl lg:text-3xl xl:p-2 xl:text-xl 2xl:p-4 2xl:text-3xl"
           >
             {temperature} &#x000B0;C
           </motion.p>

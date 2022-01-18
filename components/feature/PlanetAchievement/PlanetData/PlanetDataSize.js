@@ -33,7 +33,9 @@ const PlanetDataSize = ({ size }) => {
                 )
               )}
             </ul>
-            <h3 className="text-xl font-black text-white uppercase">{size}</h3>
+            <h3 className="text-xl font-black text-white uppercase xl:text-sm 2xl:text-xl">
+              {size}
+            </h3>
           </motion.div>
         )}
       </AnimatePresence>

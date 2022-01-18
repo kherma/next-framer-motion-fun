@@ -6,7 +6,7 @@ import { planetAtmosphereAnim } from "../../../animations/planetPageAnim/planetA
 const PlanetAtmosphere = ({ atmosphere }) => {
   const { initial, animate, exit, transition } = planetAtmosphereAnim;
   return (
-    <ul className="overflow-hidden bg-slate-200 rounded-2xl">
+    <ul className="overflow-hidden w-full h-[21rem] bg-slate-200 rounded-2xl sm:h-[22rem] xl:h-56 2xl:h-full">
       <AnimatePresence>
         {atmosphere && atmosphere.length > 0 && (
           <motion.ul

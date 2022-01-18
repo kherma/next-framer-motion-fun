@@ -2,7 +2,7 @@ import React from "react";
 
 const PlanetDescriptionBtnAchievement = () => {
   return (
-    <button className="relative p-4 w-1/2 h-full font-black text-center text-white uppercase bg-yellow-400 transition-all duration-300 xl:hover:tracking-widest">
+    <button className="relative p-4 w-1/2 h-full font-black text-center text-white uppercase bg-yellow-400 transition-all duration-300 xl:py-4 xl:px-2 xl:hover:tracking-widest 2xl:p-4">
       achievement
     </button>
   );

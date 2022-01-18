@@ -6,7 +6,7 @@ import PlanetDataPopulation from "./PlanetDataPopulation";
 
 const PlanetData = ({ size, distanceFromSun, temperature, population }) => {
   return (
-    <div className="grid overflow-hidden grid-cols-2 auto-rows-fr gap-2 w-full h-full rounded-2xl sm:gap-4">
+    <div className="grid overflow-hidden grid-cols-2 auto-rows-fr gap-2 w-full h-[21rem] rounded-2xl sm:gap-4 sm:h-[22rem] xl:h-56 2xl:h-full">
       <PlanetDataSize size={size} />
       <PlanetDataDistance distanceFromSun={distanceFromSun} />
       <PlanetDataTemperature temperature={temperature} />

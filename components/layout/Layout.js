@@ -24,7 +24,7 @@ const Layout = ({ children, pageTitle }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 w-screen min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
+    <div className="flex flex-col gap-4 p-4 w-full h-full min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
       <Head>
         <title>{`${pagesData[pageTitle].title} ${titlePart}`}</title>
         <meta name="description" content={pagesData[pageTitle].description} />
@@ -34,27 +34,25 @@ const Layout = ({ children, pageTitle }) => {
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
       <Header handleOpen={open} />
-      <main className="w-full h-full">
-        <div className="flex flex-col gap-8 w-full h-full xl:flex-row">
-          <PageDescription
-            title={pagesData[pageTitle].title}
-            message={pagesData[pageTitle].message}
-          />
+      <main className="flex flex-col gap-8 w-full h-full xl:flex-row">
+        <PageDescription
+          title={pagesData[pageTitle].title}
+          message={pagesData[pageTitle].message}
+        />
 
-          <div className=" py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
-            <motion.div
-              initial={pageAnim.initial}
-              animate={pageAnim.animate}
-              className="flex flex-col gap-8 justify-center items-center w-full h-full"
-            >
-              <AchievementMessage
-                achievementDescription={
-                  pagesData[pageTitle].achievementDescription
-                }
-              />
-              {children}
-            </motion.div>
-          </div>
+        <div className=" py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
+          <motion.div
+            initial={pageAnim.initial}
+            animate={pageAnim.animate}
+            className="flex flex-col gap-8 justify-center items-center w-full h-full xl:gap-4 2xl:gap-8"
+          >
+            <AchievementMessage
+              achievementDescription={
+                pagesData[pageTitle].achievementDescription
+              }
+            />
+            {children}
+          </motion.div>
         </div>
       </main>
     </div>

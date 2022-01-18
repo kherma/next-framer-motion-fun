@@ -6,7 +6,7 @@ import { planetViewAnim } from "../../../animations/planetPageAnim/planetViewAni
 const PlanetView = ({ container, planet }) => {
   const { initial, animate, exit, transition } = planetViewAnim;
   return (
-    <div className="overflow-hidden rounded-2xl planetContainer">
+    <div className="overflow-hidden w-full h-[21rem] rounded-2xl sm:h-[22rem] xl:h-56 2xl:h-full planetContainer">
       <AnimatePresence>
         {container && planet && (
           <motion.div
@@ -16,7 +16,7 @@ const PlanetView = ({ container, planet }) => {
             transition={transition}
             className="flex justify-center items-center w-full h-full"
           >
-            <div className="w-72 h-72">
+            <div className="w-72 h-72 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72">
               <div
                 style={{ transform: container ? container : "scale(1)" }}
                 className="relative w-full h-full"

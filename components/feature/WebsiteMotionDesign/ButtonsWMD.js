@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../../animations/btnScaleAnim";
-
+const innerData = [
+  { animation: "scale", color: "bg-teal-400" },
+  { animation: "minimize", color: "bg-orange-300" },
+  { animation: "exit", color: "bg-bgRed-200" },
+  { animation: "rotate", color: "bg-blue-400" },
+];
 const ButtonsWMD = ({ resizeAnimations, setResizeAnimations }) => {
   const { whileHover, whileTap, transition } = btnScaleAnim(false, 0.9, 1.2);
 
@@ -13,34 +18,16 @@ const ButtonsWMD = ({ resizeAnimations, setResizeAnimations }) => {
   };
   return (
     <ul className="flex gap-4 w-full">
-      <motion.li
-        whileHover={whileHover}
-        whileTap={whileTap}
-        transition={transition}
-        onClick={() => toggleAnimation("scale")}
-        className="w-4 h-4 bg-teal-400 rounded-full cursor-pointer md:w-8 md:h-8"
-      />
-      <motion.li
-        whileHover={whileHover}
-        whileTap={whileTap}
-        transition={transition}
-        onClick={() => toggleAnimation("minimize")}
-        className="w-4 h-4 bg-orange-300 rounded-full cursor-pointer md:w-8 md:h-8"
-      />
-      <motion.li
-        whileHover={whileHover}
-        whileTap={whileTap}
-        transition={transition}
-        onClick={() => toggleAnimation("exit")}
-        className="w-4 h-4 bg-bgRed-200 rounded-full cursor-pointer md:w-8 md:h-8"
-      />
-      <motion.li
-        whileHover={whileHover}
-        whileTap={whileTap}
-        transition={transition}
-        onClick={() => toggleAnimation("rotate")}
-        className="w-4 h-4 bg-blue-400 rounded-full cursor-pointer md:w-8 md:h-8"
-      />
+      {innerData.map(({ animation, color }, index) => (
+        <motion.li
+          key={index}
+          whileHover={whileHover}
+          whileTap={whileTap}
+          transition={transition}
+          onClick={() => toggleAnimation(animation)}
+          className={`w-4 h-4 ${color} rounded-full cursor-pointer sm:w-8 sm:h-8`}
+        />
+      ))}
     </ul>
   );
 };
