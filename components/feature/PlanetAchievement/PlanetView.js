@@ -6,7 +6,7 @@ import { planetViewAnim } from "../../../animations/planetPageAnim/planetViewAni
 const PlanetView = ({ container, planet }) => {
   const { initial, animate, exit, transition } = planetViewAnim;
   return (
-    <div className="overflow-hidden rounded-2xl planetContainer">
+    <div className="overflow-hidden w-full h-[21rem] rounded-2xl sm:h-[22rem] xl:h-full planetContainer">
       <AnimatePresence>
         {container && planet && (
           <motion.div

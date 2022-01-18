@@ -16,7 +16,7 @@ const PlanetDescriptionSummary = ({ description, name }) => {
             className="flex flex-col gap-2 justify-start items-end py-2 px-4 w-full h-full"
           >
             <h3 className="text-xl font-black text-right">{name}</h3>
-            <p className="text-justify">{description}</p>
+            <p className="text-justify ">{description}</p>
           </motion.div>
         )}
       </AnimatePresence>
