@@ -12,7 +12,7 @@ const ModalWMD = ({ handleClose }) => {
       animate={backdropAnim.animate}
       exit={backdropAnim.exit}
       onClick={handleClose}
-      className="flex justify-center items-center w-full h-full bg-slate-900 absoltue"
+      className="flex justify-center items-center w-full h-full bg-slate-900 rounded-2xl absoltue"
     >
       <motion.div
         initial={modalAnim.initial}
