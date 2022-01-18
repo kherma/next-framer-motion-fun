@@ -32,10 +32,6 @@ const ModalWMD = ({ handleClose }) => {
             />
           ))}
         </button>
-        <p className="p-2 w-full h-full text-center uppercase md:p-8 md:text-2xl lg:text-3xl paper">
-          <span className="mr-2 font-bold">warning:</span>
-          there is no way back!
-        </p>
         <button className="w-full h-8 font-black text-center text-white uppercase bg-yellow-400 transition-colors duration-500 sm:h-16 lg:p-4 xl:text-black xl:hover:text-white xl:bg-white xl:hover:bg-yellow-400 paper">
           achievement
         </button>

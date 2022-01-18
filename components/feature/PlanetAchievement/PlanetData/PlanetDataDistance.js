@@ -20,7 +20,7 @@ const PlanetDataDistance = ({ distanceFromSun }) => {
             <CgArrowsHAlt className="text-3xl text-red-400" />
             <p>miles</p>
             <div className="absolute top-1/2 right-[120%] w-72 h-72 bg-yellow-400 rounded-full border-[1rem] border-red-500 -translate-y-1/2 xl:right-[135%]" />
-            <div className="absolute top-1/2 -right-7 w-4 h-4 bg-white rounded-full -translate-y-1/2 lg:-right-12 xl:-right-9" />
+            <div className="absolute top-1/2 -right-7 w-4 h-4 bg-white rounded-full -translate-y-1/2 lg:-right-12 xl:-right-7 2xl:-right-9" />
           </motion.div>
         )}
       </AnimatePresence>

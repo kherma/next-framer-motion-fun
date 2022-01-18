@@ -14,9 +14,9 @@ const PlanetDataPopulation = ({ population }) => {
             animate={animate}
             exit={exit}
             transition={transition}
-            className="flex flex-col gap-4 justify-center items-center w-full h-full"
+            className="flex flex-col gap-4 justify-center items-center w-full h-full xl:gap-2 2xl:gap-4"
           >
-            <IoMan className="text-5xl" />
+            <IoMan className="text-5xl xl:text-4xl 2xl:test-5xl" />
             <p className="flex justify-between items-center text-2xl">
               {population ? population : "0"} m
             </p>

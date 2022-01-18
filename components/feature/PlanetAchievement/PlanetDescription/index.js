@@ -21,7 +21,7 @@ const PlanetDescription = ({
   return (
     <motion.div
       animate={animateEntry}
-      className="flex overflow-hidden flex-col w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full"
+      className="flex overflow-hidden flex-col w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-56 2xl:h-full"
     >
       <div className="flex justify-between items-center">
         <PlanetDescriptionBtnExplore

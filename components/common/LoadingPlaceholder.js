@@ -24,7 +24,7 @@ const LoadingPlaceholder = ({ variant, loading }) => {
   return (
     <motion.div
       animate={animateEntry}
-      className="flex justify-center items-center w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full"
+      className="flex justify-center items-center w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-56 2xl:h-full"
     >
       {variant === "view" && (
         <motion.div

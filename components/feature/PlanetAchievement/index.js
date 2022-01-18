@@ -34,8 +34,8 @@ const PlanetAchievement = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 w-full h-full">
-      <div className="flex flex-col gap-8 justify-center items-center w-full h-full sm:flex-row">
+    <div className="flex flex-col gap-8 w-full h-full xl:gap-4 2xl:gap-8">
+      <div className="flex flex-col gap-8 justify-center items-center w-full h-full sm:flex-row xl:gap-4 2xl:gap-8">
         <PlanetDescription
           name={planet.data.name}
           description={planet.data.description}
@@ -53,7 +53,7 @@ const PlanetAchievement = () => {
           />
         )}
       </div>
-      <div className="flex flex-col gap-8 justify-center items-center w-full h-full sm:flex-row">
+      <div className="flex flex-col gap-8 justify-center items-center w-full h-full sm:flex-row xl:gap-4 2xl:gap-8">
         {initialAnimation ? (
           <LoadingPlaceholder loading={loading} variant="data" />
         ) : (
