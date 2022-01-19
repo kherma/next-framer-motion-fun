@@ -18,7 +18,7 @@ const AchievementsBar = () => {
         badges
       </h2>
       <div className="relative p-2 w-full h-12 bg-slate-500 rounded-full lg:w-4/5 xl:w-full 2xl:w-4/5">
-        <div
+        <ul
           onClick={handleUpdate}
           className="flex absolute top-0 left-0 gap-3 justify-between items-center p-3 w-full h-full"
         >
@@ -36,7 +36,7 @@ const AchievementsBar = () => {
               <Icon className="p-0 m-0 w-5 h-5 transition-colors" />
             </motion.li>
           ))}
-        </div>
+        </ul>
         <motion.div
           initial={{
             width: 0,

@@ -20,7 +20,7 @@ const VorpControls = () => {
           whileHover={whileHover}
           whileTap={whileTap}
           transition={transition}
-          className="p-2 text-slate-300 bg-slate-500 rounded-full sm:p-4"
+          className="p-2 text-yellow-400 bg-yellow-600 rounded-full shadow-md sm:p-4"
         >
           <Icon className="w-8 h-8 sm:w-16 sm:h-16 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10" />
         </motion.button>

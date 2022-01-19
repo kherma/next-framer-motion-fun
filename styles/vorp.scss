@@ -52,3 +52,10 @@
     40% 24%
   );
 }
+
+.vorpScreen {
+  background: linear-gradient(90deg, #22c55e 0.1rem, transparent 0.1rem),
+    linear-gradient(#22c55e 0.1rem, #16a34a 0.1rem);
+  background-size: 1rem 1rem;
+  background-position: center center;
+}
