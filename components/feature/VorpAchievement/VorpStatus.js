@@ -11,7 +11,7 @@ const VorpStatus = () => {
         {[...Array.from({ length: 3 }, (_, i) => i + 1)].map((item) => (
           <AiFillHeart
             key={item}
-            className="w-8 h-8 text-slate-300 sm:w-16 sm:h-16 xl:w-10 xl:h-10"
+            className="w-8 h-8 text-slate-300 sm:w-16 sm:h-16 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10"
           />
         ))}
       </div>

@@ -22,7 +22,7 @@ const VorpControls = () => {
           transition={transition}
           className="p-2 text-slate-300 bg-slate-500 rounded-full sm:p-4"
         >
-          <Icon className="w-8 h-8 sm:w-16 sm:h-16 xl:w-10 xl:h-10" />
+          <Icon className="w-8 h-8 sm:w-16 sm:h-16 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10" />
         </motion.button>
       ))}
     </div>
