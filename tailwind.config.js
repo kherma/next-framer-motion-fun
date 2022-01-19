@@ -13,6 +13,7 @@ module.exports = {
         bgBlue: {
           100: "#577FFB",
           200: "#698DFC",
+          300: "#2c3140",
         },
         bgRed: {
           100: "#DB4676",
