@@ -1,13 +1,26 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
+import { motion } from "framer-motion";
 
-const VorpStatus = () => {
+const VorpStatus = ({ startGame, gameLenght }) => {
   return (
     <div className="flex gap-2 justify-between items-center py-2 w-full sm:gap-8 sm:py-4 xl:py-2">
       <div className="p-2 w-full h-8 bg-yellow-600 rounded-2xl sm:p-4 sm:h-16 xl:p-2 xl:h-10">
-        <div className="w-full h-full bg-green-900 rounded-2xl shadow-md" />
+        <motion.div
+          initial={{
+            width: "100%",
+          }}
+          animate={{
+            width: startGame ? ["100%", "0%"] : "100%",
+            transition: {
+              duration: gameLenght,
+              type: "tween",
+            },
+          }}
+          className="h-full bg-green-900 rounded-2xl shadow-md"
+        />
       </div>
-      <div className="flex gap-2 justify-between items-center">
+      <div className="flex gap-2 justify-between items-center w-1/4">
         {[...Array.from({ length: 3 }, (_, i) => i + 1)].map((item) => (
           <AiFillHeart
             key={item}
