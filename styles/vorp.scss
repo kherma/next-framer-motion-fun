@@ -1,0 +1,81 @@
+$orange-light: #d9bfb0;
+$red-light: #f24472;
+$orange-dark: #d9a491;
+$red: #bf565f;
+$light: #fff;
+$blue-light: #659aa6;
+$blue: #466273;
+$blue-dark: #2c3140;
+$purple: #383a59;
+
+.vorpGears {
+  background: radial-gradient($purple, $blue-dark, $blue, $blue-light, $light);
+  -webkit-clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    60% 24%,
+    85% 0,
+    100% 15%,
+    74% 40%,
+    100% 40%,
+    100% 60%,
+    74% 60%,
+    100% 85%,
+    85% 100%,
+    60% 74%,
+    60% 100%,
+    40% 100%,
+    40% 74%,
+    15% 100%,
+    0 85%,
+    24% 60%,
+    0 60%,
+    0 40%,
+    24% 40%,
+    0 15%,
+    15% 0,
+    40% 24%
+  );
+  clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    60% 24%,
+    85% 0,
+    100% 15%,
+    74% 40%,
+    100% 40%,
+    100% 60%,
+    74% 60%,
+    100% 85%,
+    85% 100%,
+    60% 74%,
+    60% 100%,
+    40% 100%,
+    40% 74%,
+    15% 100%,
+    0 85%,
+    24% 60%,
+    0 60%,
+    0 40%,
+    24% 40%,
+    0 15%,
+    15% 0,
+    40% 24%
+  );
+  border: 0.8rem solid $blue;
+}
+
+.vorpLids {
+  border-top: 2rem solid $blue-dark;
+  border-bottom: 2rem solid $blue-dark;
+}
+
+.vorpEye {
+  background: radial-gradient(
+    $red,
+    $orange-dark,
+    $red-light,
+    $orange-light,
+    $light
+  );
+}

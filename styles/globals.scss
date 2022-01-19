@@ -1,4 +1,6 @@
 @import "./planet.scss";
+@import "./vorp.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,5 +8,9 @@
 @layer components {
   .paper {
     @apply bg-white shadow-md rounded-xl;
+  }
+
+  .absoluteCenter {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
 }

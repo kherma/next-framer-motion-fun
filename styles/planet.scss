@@ -1,3 +1,11 @@
+$dark: #111;
+$light: #fff;
+$primary-yellow-1: #f2e641;
+$primary-yellow-2: #f2c53d;
+$primary-yellow-3: #b6942e;
+$primary-yellow-4: #8b7123;
+$primary-red-1: #d94f30;
+
 @mixin fogData($x, $xValue, $y, $yValue, $color, $side, $animName, $animTime) {
   position: absolute;
   border-top-#{$side}-radius: 50px;
@@ -9,14 +17,6 @@
   background-color: $color;
   animation: #{$animName} #{$animTime * 1.2} ease-in-out infinite;
 }
-
-$dark: #111;
-$light: #fff;
-$primary-yellow-1: #f2e641, #6df2c1, #f2637e, #d93280, #f2c53d;
-$primary-yellow-2: #f2c53d;
-$primary-yellow-3: #b6942e;
-$primary-yellow-4: #8b7123;
-$primary-red-1: #d94f30;
 
 .planetContainer {
   background-color: #090820;
