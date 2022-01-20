@@ -1,30 +1,25 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { startGameStatus } from "../../../animations/vorpPageAnim/vorpStartGameAnim";
 
 const VorpStatus = ({ startGame, gameLenght }) => {
+  const status = startGameStatus(startGame, gameLenght);
   return (
     <div className="flex gap-2 justify-between items-center py-2 w-full sm:gap-8 sm:py-4 xl:py-2">
-      <div className="p-2 w-full h-8 bg-yellow-600 rounded-2xl sm:p-4 sm:h-16 xl:p-2 xl:h-10">
+      <div className="p-2 w-1/2 h-10 bg-bgViolet-400 rounded-full sm:p-4 sm:w-3/4 sm:h-16 xl:p-2 xl:h-10 2xl:h-16">
         <motion.div
-          initial={{
-            width: "100%",
-          }}
-          animate={{
-            width: startGame ? ["100%", "0%"] : "100%",
-            transition: {
-              duration: gameLenght,
-              type: "tween",
-            },
-          }}
-          className="h-full bg-green-900 rounded-2xl shadow-md"
+          variants={status}
+          initial="stop"
+          animate="start"
+          className="h-full bg-bgViolet-300 rounded-full shadow-md"
         />
       </div>
-      <div className="flex gap-2 justify-between items-center w-1/4">
+      <div className="flex gap-2 justify-end items-center w-1/2 h-full sm:gap-4 sm:w-1/4">
         {[...Array.from({ length: 3 }, (_, i) => i + 1)].map((item) => (
           <AiFillHeart
             key={item}
-            className="w-8 h-8 text-slate-500 sm:w-16 sm:h-16 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10"
+            className="w-10 h-10 text-bgViolet-400 sm:w-16 sm:h-16 xl:w-10 xl:h-10 2xl:w-16 2xl:h-16"
           />
         ))}
       </div>

@@ -21,10 +21,10 @@ export const startGameGears = {
   visible: {
     translateX: "-50%",
     translateY: "-50%",
-    rotate: 3600,
+    rotate: [0, 270, -270, 0],
     transition: {
       delay: 2,
-      duration: 60,
+      duration: 8,
     },
   },
 };
@@ -57,3 +57,16 @@ export const startGameEye = {
     },
   },
 };
+
+export const startGameStatus = (startGame, gameLenght) => ({
+  stop: {
+    width: "100%",
+  },
+  start: {
+    width: startGame ? ["100%", "0%"] : "100%",
+    transition: {
+      duration: startGame ? gameLenght : 1,
+      type: "tween",
+    },
+  },
+});

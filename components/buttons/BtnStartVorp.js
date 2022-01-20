@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../animations/btnScaleAnim";
 
-const BtnStartVorp = ({ handleStartGame }) => {
-  const { whileHover, whileTap, transition } = btnScaleAnim(false);
+const BtnStartVorp = ({ handleGameStart }) => {
+  const { whileHover, whileTap, transition } = btnScaleAnim(false, 0.95, 1.03);
   return (
     <motion.button
-      onClick={handleStartGame}
+      onClick={handleGameStart}
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
@@ -14,7 +14,7 @@ const BtnStartVorp = ({ handleStartGame }) => {
         scale: 0,
         opacity: 0,
       }}
-      className="absolute py-4 px-8 text-xl font-black text-white uppercase bg-yellow-500 rounded-xl shadow-md sm:py-8 sm:px-12 sm:text-3xl"
+      className="absolute py-4 px-8 text-xl font-black text-white uppercase rounded-xl sm:py-8 sm:px-12 sm:text-3xl btnStart"
     >
       Start Vorp
     </motion.button>
