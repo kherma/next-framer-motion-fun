@@ -26,7 +26,31 @@ const playGameAnim = {
   lids: playGameLids,
 };
 
+const sleepActionAnim = {
+  container: startGameVorp,
+  gears: startGameGears,
+  eye: startGameEye,
+  lids: startGameLids,
+};
+
+const eatActionAnim = {
+  container: startGameVorp,
+  gears: startGameGears,
+  eye: startGameEye,
+  lids: startGameLids,
+};
+
+const readActionAnim = {
+  container: startGameVorp,
+  gears: startGameGears,
+  eye: startGameEye,
+  lids: startGameLids,
+};
+
 export const vorpGameAnim = {
   startGameAnim,
   playGameAnim,
+  sleepActionAnim,
+  eatActionAnim,
+  readActionAnim,
 };

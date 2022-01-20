@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layout/Layout";
 import VorpStatus from "../components/feature/VorpAchievement/VorpStatus";
 import VorpPet from "../components/feature/VorpAchievement/VorpPet";
@@ -9,52 +9,66 @@ import { AnimatePresence } from "framer-motion";
 import { config } from "../config/config";
 
 const Vorp = () => {
-  const gameLenght = 5;
   const { vorpGameAnim } = config;
   const [startGame, setStartGame] = useState(false);
-  const [startGameAnim, setStartGameAnim] = useState(false);
-  const [action, setAction] = useState("startGameAnim");
+  const [completedActions, setCompletedActions] = useState([]);
+  const [currentAction, setCurrentAction] = useState({
+    animation: "startGameAnim",
+    started: false,
+  });
+  const [getAchievement, setGetAchievement] = useState(false);
 
-  // startGameAnim
-  // playGameAnim
-  // sleepActionAnim
-  // eatActionAnim
-  // readActionAnim
+  const handleStart = () => {
+    setCompletedActions([]);
+    setCurrentAction({
+      animation: "startGameAnim",
+      started: false,
+    });
 
-  const handleGameStart = () => {
-    setStartGameAnim(true);
+    setStartGame(true);
     setTimeout(() => {
-      setAction("playGameAnim");
-      setStartGame(true);
+      setCurrentAction((prevState) => ({
+        ...prevState,
+        animation: "playGameAnim",
+      }));
     }, 10000);
-    setTimeout(() => {
-      setStartGameAnim(false);
-      setStartGame(false);
-      setAction("startGameAnim");
-    }, gameLenght * 1000 + 10000);
   };
 
-  // const handleGameAction = (action, time) => {
-  //   setAction(action),
-  //     setTimeout(() => {
-  //       setAction("playGameAnim");
-  //     }, time);
-  // };
+  const handleActions = (action, time) => {
+    setCurrentAction({ started: true, animation: action });
+    setTimeout(() => {
+      setCompletedActions((prevState) => [...prevState, action]);
+      setCurrentAction({ started: false, animation: "playGameAnim" });
+    }, time * 1000);
+  };
+
+  useEffect(() => {
+    if (completedActions.length === 3) {
+      completedActions === 3 && setGetAchievement(true);
+      setStartGame(false);
+    }
+  }, [completedActions]);
 
   return (
     <Layout pageTitle="vorp">
-      <div className="flex relative flex-col gap-4 p-4 w-full h-full rounded-2xl sm:gap-8 sm:p-8 xl:gap-4 xl:py-4 xl:px-8 gameboy">
-        <VorpStatus startGame={startGame} gameLenght={gameLenght} />
-        <div className="flex overflow-hidden justify-center items-center w-full h-80 rounded-2xl sm:py-8 sm:h-[30rem] xl:py-4 xl:h-full screen">
+      <div className="flex flex-col gap-4 p-4 w-full h-full rounded-2xl sm:gap-8 sm:p-8 xl:gap-4 xl:py-4 xl:px-8 gameboy">
+        <VorpStatus completedActions={completedActions} />
+        <div className="flex overflow-hidden relative justify-center items-center w-full h-80 rounded-2xl sm:py-8 sm:h-[30rem] xl:py-4 xl:h-full screen">
+          {getAchievement && <h1>achievemetn</h1>}
           <AnimatePresence>
-            {!startGameAnim && (
-              <BtnStartVorp handleGameStart={handleGameStart} />
-            )}
+            {!startGame && <BtnStartVorp handleStart={handleStart} />}
           </AnimatePresence>
-          {startGameAnim && <VorpPet animations={vorpGameAnim[action]} />}
+          {startGame && (
+            <VorpPet animations={vorpGameAnim[currentAction.animation]} />
+          )}
           {/* <VorpSleep /> */}
         </div>
-        <VorpControls startGame={startGame} />
+        <VorpControls
+          startGame={startGame}
+          completedActions={completedActions}
+          handleActions={handleActions}
+          currentAction={currentAction}
+        />
       </div>
     </Layout>
   );

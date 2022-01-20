@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../animations/btnScaleAnim";
 
-const BtnStartVorp = ({ handleGameStart }) => {
+const BtnStartVorp = ({ handleStart }) => {
   const { whileHover, whileTap, transition } = btnScaleAnim(false, 0.95, 1.03);
   return (
     <motion.button
-      onClick={handleGameStart}
+      onClick={handleStart}
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}

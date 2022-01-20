@@ -57,16 +57,3 @@ export const startGameEye = {
     },
   },
 };
-
-export const startGameStatus = (startGame, gameLenght) => ({
-  stop: {
-    width: "100%",
-  },
-  start: {
-    width: startGame ? ["100%", "0%"] : "100%",
-    transition: {
-      duration: startGame ? gameLenght : 1,
-      type: "tween",
-    },
-  },
-});
