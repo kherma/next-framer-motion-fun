@@ -4,8 +4,8 @@ export const startGameVorp = {
     opacity: 0,
   },
   visible: {
-    scale: 1,
-    opacity: 1,
+    scale: [0, 1],
+    opacity: [0, 1],
     transition: {
       delay: 0.3,
       duration: 1,

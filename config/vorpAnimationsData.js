@@ -1,3 +1,5 @@
+import { GiNightSleep, GiBookCover, GiElectric } from "react-icons/gi";
+
 import {
   startGameVorp,
   startGameGears,
@@ -11,6 +13,19 @@ import {
   playGameLids,
   playGameEye,
 } from "../animations/vorpPageAnim/vorpPlayGameAnim";
+
+import {
+  sleepActionVorp,
+  sleepActionGears,
+  sleepActionLids,
+  sleepActionEye,
+} from "../animations/vorpPageAnim/vorpSleepActionAnim";
+
+const controlsData = [
+  { Icon: GiNightSleep, action: "sleepActionAnim", time: 10 },
+  { Icon: GiElectric, action: "eatActionAnim", time: 10 },
+  { Icon: GiBookCover, action: "readActionAnim", time: 10 },
+];
 
 const startGameAnim = {
   container: startGameVorp,
@@ -27,30 +42,33 @@ const playGameAnim = {
 };
 
 const sleepActionAnim = {
-  container: startGameVorp,
-  gears: startGameGears,
-  eye: startGameEye,
-  lids: startGameLids,
+  container: sleepActionVorp,
+  gears: sleepActionGears,
+  eye: sleepActionEye,
+  lids: sleepActionLids,
 };
 
 const eatActionAnim = {
-  container: startGameVorp,
-  gears: startGameGears,
-  eye: startGameEye,
-  lids: startGameLids,
+  container: sleepActionVorp,
+  gears: sleepActionGears,
+  eye: sleepActionEye,
+  lids: sleepActionLids,
 };
 
 const readActionAnim = {
-  container: startGameVorp,
-  gears: startGameGears,
-  eye: startGameEye,
-  lids: startGameLids,
+  container: sleepActionVorp,
+  gears: sleepActionGears,
+  eye: sleepActionEye,
+  lids: sleepActionLids,
 };
 
 export const vorpGameAnim = {
-  startGameAnim,
-  playGameAnim,
-  sleepActionAnim,
-  eatActionAnim,
-  readActionAnim,
+  animations: {
+    startGameAnim,
+    playGameAnim,
+    sleepActionAnim,
+    eatActionAnim,
+    readActionAnim,
+  },
+  controlsData,
 };

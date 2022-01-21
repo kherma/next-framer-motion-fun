@@ -3,13 +3,15 @@ import Layout from "../components/layout/Layout";
 import VorpStatus from "../components/feature/VorpAchievement/VorpStatus";
 import VorpPet from "../components/feature/VorpAchievement/VorpPet";
 import VorpControls from "../components/feature/VorpAchievement/VorpControls";
-// import VorpSleep from "../components/feature/VorpAchievement/VorpSleep";
-import BtnStartVorp from "../components/buttons/BtnStartVorp";
+import VorpSleep from "../components/feature/VorpAchievement/VorpSleep";
+import BtnVropGame from "../components/buttons/BtnVropGame";
 import { AnimatePresence } from "framer-motion";
 import { config } from "../config/config";
 
 const Vorp = () => {
-  const { vorpGameAnim } = config;
+  const {
+    vorpGameAnim: { animations, controlsData },
+  } = config;
   const [startGame, setStartGame] = useState(false);
   const [completedActions, setCompletedActions] = useState([]);
   const [currentAction, setCurrentAction] = useState({
@@ -44,8 +46,13 @@ const Vorp = () => {
 
   useEffect(() => {
     if (completedActions.length === 3) {
-      completedActions === 3 && setGetAchievement(true);
-      setStartGame(false);
+      const timer = setTimeout(() => {
+        setGetAchievement(true);
+        setStartGame(false);
+      }, 2000);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [completedActions]);
 
@@ -54,20 +61,33 @@ const Vorp = () => {
       <div className="flex flex-col gap-4 p-4 w-full h-full rounded-2xl sm:gap-8 sm:p-8 xl:gap-4 xl:py-4 xl:px-8 gameboy">
         <VorpStatus completedActions={completedActions} />
         <div className="flex overflow-hidden relative justify-center items-center w-full h-80 rounded-2xl sm:py-8 sm:h-[30rem] xl:py-4 xl:h-full screen">
-          {getAchievement && <h1>achievemetn</h1>}
+          {getAchievement && (
+            <div className="flex flex-col gap-8 justify-center items-center ">
+              <BtnVropGame
+                handleBehaviour={() => console.log("achievement")}
+                text="achievement"
+              />
+              <BtnVropGame handleBehaviour={handleStart} text="play again" />
+            </div>
+          )}
           <AnimatePresence>
-            {!startGame && <BtnStartVorp handleStart={handleStart} />}
+            {!startGame && !getAchievement && (
+              <div className="absolute">
+                <BtnVropGame handleBehaviour={handleStart} text="start vorp" />
+              </div>
+            )}
           </AnimatePresence>
           {startGame && (
-            <VorpPet animations={vorpGameAnim[currentAction.animation]} />
+            <VorpPet animations={animations[currentAction.animation]} />
           )}
-          {/* <VorpSleep /> */}
+          {currentAction.animation === "sleepActionAnim" && <VorpSleep />}
         </div>
         <VorpControls
           startGame={startGame}
           completedActions={completedActions}
-          handleActions={handleActions}
           currentAction={currentAction}
+          handleActions={handleActions}
+          controlsData={controlsData}
         />
       </div>
     </Layout>

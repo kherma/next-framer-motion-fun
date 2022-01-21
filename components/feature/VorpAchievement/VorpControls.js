@@ -1,20 +1,14 @@
 import React from "react";
-import { GiNightSleep, GiBookCover, GiElectric } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../../animations/btnScaleAnim";
 import { v4 as uuidv4 } from "uuid";
-
-const innerData = [
-  { Icon: GiNightSleep, action: "sleepActionAnim", time: 10 },
-  { Icon: GiElectric, action: "eatActionAnim", time: 10 },
-  { Icon: GiBookCover, action: "readActionAnim", time: 10 },
-];
 
 const VorpControls = ({
   startGame,
   completedActions,
   handleActions,
   currentAction,
+  controlsData,
 }) => {
   const isBtnDsiabled = (disabled, action) => {
     const isDisablet =
@@ -27,7 +21,7 @@ const VorpControls = ({
 
   return (
     <div className="flex justify-evenly items-center py-2 w-full sm:py-4 xl:py-2">
-      {innerData.map(({ Icon, action, time }) => (
+      {controlsData.map(({ Icon, action, time }) => (
         <motion.button
           disabled={isBtnDsiabled(true, action)}
           key={uuidv4()}
