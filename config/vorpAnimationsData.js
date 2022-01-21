@@ -21,6 +21,13 @@ import {
   sleepActionEye,
 } from "../animations/vorpPageAnim/vorpSleepActionAnim";
 
+import {
+  readActionVorp,
+  readActionGears,
+  readActionLids,
+  readActionEye,
+} from "../animations/vorpPageAnim/vorpReadActionAnim";
+
 const controlsData = [
   { Icon: GiNightSleep, action: "sleepActionAnim", time: 10 },
   { Icon: GiElectric, action: "eatActionAnim", time: 10 },
@@ -56,10 +63,10 @@ const eatActionAnim = {
 };
 
 const readActionAnim = {
-  container: sleepActionVorp,
-  gears: sleepActionGears,
-  eye: sleepActionEye,
-  lids: sleepActionLids,
+  container: readActionVorp,
+  gears: readActionGears,
+  eye: readActionEye,
+  lids: readActionLids,
 };
 
 export const vorpGameAnim = {

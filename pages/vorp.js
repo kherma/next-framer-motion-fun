@@ -4,7 +4,9 @@ import VorpStatus from "../components/feature/VorpAchievement/VorpStatus";
 import VorpPet from "../components/feature/VorpAchievement/VorpPet";
 import VorpControls from "../components/feature/VorpAchievement/VorpControls";
 import VorpSleep from "../components/feature/VorpAchievement/VorpSleep";
+import VorpRead from "../components/feature/VorpAchievement/VorpRead";
 import BtnVropGame from "../components/buttons/BtnVropGame";
+import BtnPlayAgain from "../components/buttons/BtnPlayAgain";
 import { AnimatePresence } from "framer-motion";
 import { config } from "../config/config";
 
@@ -21,6 +23,7 @@ const Vorp = () => {
   const [getAchievement, setGetAchievement] = useState(false);
 
   const handleStart = () => {
+    setGetAchievement(false);
     setCompletedActions([]);
     setCurrentAction({
       animation: "startGameAnim",
@@ -62,25 +65,24 @@ const Vorp = () => {
         <VorpStatus completedActions={completedActions} />
         <div className="flex overflow-hidden relative justify-center items-center w-full h-80 rounded-2xl sm:py-8 sm:h-[30rem] xl:py-4 xl:h-full screen">
           {getAchievement && (
-            <div className="flex flex-col gap-8 justify-center items-center ">
+            <div className="flex flex-col gap-8 justify-center items-center">
               <BtnVropGame
                 handleBehaviour={() => console.log("achievement")}
                 text="achievement"
               />
-              <BtnVropGame handleBehaviour={handleStart} text="play again" />
+              <BtnPlayAgain handleStart={handleStart} />
             </div>
           )}
           <AnimatePresence>
             {!startGame && !getAchievement && (
-              <div className="absolute">
-                <BtnVropGame handleBehaviour={handleStart} text="start vorp" />
-              </div>
+              <BtnVropGame handleBehaviour={handleStart} text="start vorp" />
             )}
           </AnimatePresence>
           {startGame && (
             <VorpPet animations={animations[currentAction.animation]} />
           )}
           {currentAction.animation === "sleepActionAnim" && <VorpSleep />}
+          {currentAction.animation === "readActionAnim" && <VorpRead />}
         </div>
         <VorpControls
           startGame={startGame}

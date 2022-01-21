@@ -4,8 +4,11 @@ export const playGameVorp = {
     opacity: 0,
   },
   visible: {
-    scale: [0, 1],
-    opacity: [0, 1],
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
   },
 };
 
