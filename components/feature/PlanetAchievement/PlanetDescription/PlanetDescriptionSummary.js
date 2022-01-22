@@ -13,12 +13,12 @@ const PlanetDescriptionSummary = ({ description, name }) => {
             animate={animate}
             exit={exit}
             transition={transition}
-            className="flex flex-col gap-2 justify-start items-end py-2 px-4 w-full h-full xl:gap-1 2xl:gap-2"
+            className="flex flex-col gap-2 justify-start items-end py-2 px-4 w-full h-full lg:p-8 xl:p-4 2xl:gap-6"
           >
-            <h3 className="text-xl font-black text-right xl:text-sm 2xl:text-xl">
+            <h3 className="text-xl font-black text-right lg:text-2xl xl:text-base 2xl:text-2xl">
               {name}
             </h3>
-            <p className="text-justify xl:text-xs 2xl:text-base">
+            <p className="text-justify xl:text-sm 2xl:text-base">
               {description}
             </p>
           </motion.div>

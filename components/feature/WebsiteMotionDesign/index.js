@@ -19,7 +19,7 @@ const WebsiteMotionDesign = () => {
 
   return (
     <div className="w-full h-80 sm:h-[37rem] md:h-[45rem] xl:h-full">
-      <div className="overflow-hidden relative w-full h-full bg-slate-200 rounded-2xl shadow-md">
+      <div className="overflow-hidden relative w-full h-full bg-white rounded-2xl shadow-md">
         <AnimatePresence initial={false} exitBeforeEnter={true}>
           {isModalOpen && <ModalWMD handleClose={close} />}
         </AnimatePresence>

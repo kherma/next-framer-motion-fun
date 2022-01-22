@@ -13,6 +13,7 @@ module.exports = {
         bgBlue: {
           100: "#577FFB",
           200: "#698DFC",
+          300: "#2c3140",
         },
         bgRed: {
           100: "#DB4676",
@@ -21,6 +22,9 @@ module.exports = {
         bgViolet: {
           100: "#885FDD",
           200: "#A881F6",
+          300: "#cf8dcb",
+          400: "#372746",
+          500: "#593e70",
         },
         bgGreen: {
           100: "#5CDB69",

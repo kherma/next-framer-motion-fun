@@ -6,6 +6,7 @@ import Head from "next/head";
 import Header from "./Header";
 import Modal from "./Modal";
 import PageDescription from "./PageDescription";
+import AchievementMessage from "../common/AchievementMessage";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,7 +24,7 @@ const Layout = ({ children, pageTitle }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 w-full h-full min-h-screen bg-gray-200 sm:gap-8 sm:p-8 xl:h-screen">
+    <div className="flex flex-col gap-4 p-4 w-full h-full min-h-screen bg-gray-200 lg:gap-8 lg:p-8 xl:h-screen">
       <Head>
         <title>{`${pagesData[pageTitle].title} ${titlePart}`}</title>
         <meta name="description" content={pagesData[pageTitle].description} />
@@ -37,15 +38,19 @@ const Layout = ({ children, pageTitle }) => {
         <PageDescription
           title={pagesData[pageTitle].title}
           message={pagesData[pageTitle].message}
-          achievementDescription={pagesData[pageTitle].achievementDescription}
         />
 
-        <div className="w-full h-full xl:w-1/2">
+        <div className=" py-8 px-4 w-full h-full sm:p-8 xl:w-1/2 paper">
           <motion.div
             initial={pageAnim.initial}
             animate={pageAnim.animate}
-            className="flex justify-center items-center w-full h-full"
+            className="flex flex-col gap-8 justify-center items-center w-full h-full xl:gap-4 2xl:gap-8"
           >
+            <AchievementMessage
+              achievementDescription={
+                pagesData[pageTitle].achievementDescription
+              }
+            />
             {children}
           </motion.div>
         </div>

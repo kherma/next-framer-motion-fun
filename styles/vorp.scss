@@ -1,0 +1,147 @@
+.vorpGears {
+  -webkit-clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    60% 24%,
+    85% 0,
+    100% 15%,
+    74% 40%,
+    100% 40%,
+    100% 60%,
+    74% 60%,
+    100% 85%,
+    85% 100%,
+    60% 74%,
+    60% 100%,
+    40% 100%,
+    40% 74%,
+    15% 100%,
+    0 85%,
+    24% 60%,
+    0 60%,
+    0 40%,
+    24% 40%,
+    0 15%,
+    15% 0,
+    40% 24%
+  );
+  clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    60% 24%,
+    85% 0,
+    100% 15%,
+    74% 40%,
+    100% 40%,
+    100% 60%,
+    74% 60%,
+    100% 85%,
+    85% 100%,
+    60% 74%,
+    60% 100%,
+    40% 100%,
+    40% 74%,
+    15% 100%,
+    0 85%,
+    24% 60%,
+    0 60%,
+    0 40%,
+    24% 40%,
+    0 15%,
+    15% 0,
+    40% 24%
+  );
+}
+
+$purple-1: #a36d9f;
+$purple-2: #7e589e;
+$purple-3: #593e70;
+$purple-4: #372746;
+$blue-1: #0d1e31;
+$blue-2: #060e17;
+$green-1: #3a8569;
+$green-2: #4caa87;
+$yellow-1: #f7f4bc;
+$yellow-2: #f2c53d;
+$yellow-3: #b6942e;
+$yellow-4: #8b7123;
+$dark: #000;
+$light: #fff;
+$gray-1: #333;
+$gray-2: #666;
+$gray-3: #777;
+
+.gameboy {
+  background-color: $purple-2;
+  border-bottom: 0.8rem solid $purple-3;
+  box-shadow: inset 0.2rem 0 0 0 $purple-2, inset -0.2rem 0 0 0 $purple-2,
+    inset 0.5rem 0.5rem 0 0 $purple-1, inset -0.5rem 0.5rem 0 0 $purple-1,
+    inset 0.5rem -0.5rem 0 0 $purple-1, inset -0.5rem -0.5rem 0 0 $purple-1;
+}
+
+.screen {
+  box-shadow: inset 0.5rem 0.5rem 0 0 $blue-1, inset -0.5rem 0.5rem 0 0 $blue-1;
+  background: linear-gradient(90deg, $green-1 0.1rem, transparent 0.1rem),
+    linear-gradient($green-1 0.1rem, $green-2 0.1rem);
+  background-size: 2rem 2rem;
+  background-position: center center;
+}
+
+.btnStart {
+  box-shadow: 0 0.2rem 0.3rem rgba($dark, 0.3);
+  background-color: $yellow-2;
+  border-bottom: 0.5rem solid $yellow-3;
+  transition: box-shadow 0.3s linear;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.5rem 0.5rem rgba($dark, 0.3);
+  }
+
+  &:active {
+    box-shadow: 0 0.1rem 0.3rem rgba($dark, 0.3);
+  }
+}
+
+.btnControl {
+  box-shadow: 0 0.3rem 0.3rem rgba($dark, 0.3);
+  background-color: $yellow-2;
+  border-bottom: 0.3rem solid $yellow-3;
+  transition: box-shadow 0.3s linear;
+  color: $light;
+
+  &:disabled,
+  &[disabled] {
+    background-color: $gray-1;
+    border-bottom: 0.3rem solid $gray-2;
+    color: $gray-3;
+    box-shadow: 0 0.1rem 0.1rem rgba($dark, 0.3);
+
+    &:hover,
+    &:active {
+      box-shadow: 0 0.1rem 0.1rem rgba($dark, 0.3);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba($dark, 0.3);
+  }
+
+  &:active {
+    box-shadow: 0 0.1rem 0.5rem rgba($dark, 0.3);
+  }
+}
+
+.fan {
+  background-image: linear-gradient(
+    90deg,
+    transparent 10%,
+    $purple-2 10%,
+    $purple-2 20%,
+    $purple-4 20%,
+    $purple-4 90%,
+    transparent 90%
+  );
+  background-size: 0.8rem 1rem;
+  background-position: center center;
+}
