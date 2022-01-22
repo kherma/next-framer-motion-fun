@@ -18,7 +18,8 @@ export const pagesData = {
     title: "Vorp",
     description:
       "Animated animalistic robot that meant to be a voice assistant visualization.",
-    message: "",
+    message:
+      "Vorp is an animalistic robot. Project was created to practice drawing with CSS and I also added a Tamagotchi style interface.",
     achievementDescription: "make vorp happy",
   },
   letter: {

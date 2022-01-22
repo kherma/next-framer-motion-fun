@@ -90,9 +90,11 @@ export const readActionText = {
   hidden: {
     y: "0%",
     opacity: 0,
+    rotateY: "180deg",
   },
   visible: {
     y: ["0%", "-100%"],
+    rotateY: "180deg",
     opacity: [0, 0.7, 0.7, 0.7, 0],
     transition: {
       opacity: {
