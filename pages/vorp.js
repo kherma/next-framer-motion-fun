@@ -21,7 +21,7 @@ const Vorp = () => {
     animation: "startGameAnim",
     started: false,
   });
-  const [getAchievement, setGetAchievement] = useState(true);
+  const [getAchievement, setGetAchievement] = useState(false);
 
   const handleStart = () => {
     setGetAchievement(false);
