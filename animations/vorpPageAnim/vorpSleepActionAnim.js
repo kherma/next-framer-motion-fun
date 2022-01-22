@@ -77,7 +77,8 @@ export const sleepActionDome = {
     translateX: "-50%",
     opacity: [0, 1, 1, 1, 0],
     transition: {
-      duration: 10,
+      delay: 1,
+      duration: 9,
     },
   },
 };
@@ -93,7 +94,8 @@ export const sleepActionPlatform = {
     translateX: "-50%",
     opacity: [0, 1, 1, 1, 0],
     transition: {
-      duration: 10,
+      delay: 1,
+      duration: 9,
     },
   },
 };
