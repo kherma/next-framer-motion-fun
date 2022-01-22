@@ -97,3 +97,25 @@ export const sleepActionPlatform = {
     },
   },
 };
+
+export const sleepActionText = [...Array(3)].map((_, index) => ({
+  hidden: {
+    opacity: 0,
+    x: `${10 * index}px`,
+  },
+  visible: {
+    y: ["2px", "-2px", "2px", "-2px", "2px", "-2px", "2px", "-2px"],
+    x: `${10 * index}px`,
+    opacity: [0, 1, 1, 1, 0],
+    transition: {
+      y: {
+        duration: 4,
+        delay: 4 + 0.2 * index,
+      },
+      opacity: {
+        duration: 5,
+        delay: 3,
+      },
+    },
+  },
+}));

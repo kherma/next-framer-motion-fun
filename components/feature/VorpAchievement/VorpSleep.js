@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 import {
   sleepActionDome,
   sleepActionPlatform,
+  sleepActionText,
 } from "../../../animations/vorpPageAnim/vorpSleepActionAnim";
 
 const VorpSleep = () => {
@@ -20,6 +22,19 @@ const VorpSleep = () => {
         <div className="absolute bottom-0 left-1/2 w-3/4 h-1/2 -translate-x-1/2">
           <div className="w-full h-full bg-blue-200 rounded-t-full border-4 border-blue-400 opacity-70" />
           <div className="absolute right-[10%] bottom-[10%] w-[10%] h-[50%] bg-white rounded-full" />
+          <ul className="absolute top-1/4 left-[60%] text-sm text-white">
+            {sleepActionText.map((variant) => (
+              <motion.li
+                key={uuidv4()}
+                className="absolute"
+                variants={variant}
+                initial="hidden"
+                animate="visible"
+              >
+                z
+              </motion.li>
+            ))}
+          </ul>
         </div>
       </motion.div>
       <motion.div
