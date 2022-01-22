@@ -2,14 +2,21 @@ export const sleepActionVorp = {
   hidden: {
     scale: 1,
     opacity: 1,
+    y: "-50%",
   },
   visible: {
     scale: [1, 0.25],
     opacity: 1,
-    y: "-20%",
+    y: ["0%", "-15%", "-20%", "-20%", "0%"],
     transition: {
-      delay: 0.3,
-      duration: 2,
+      scale: {
+        delay: 0.3,
+        duration: 2,
+      },
+      y: {
+        delay: 0.3,
+        duration: 9.7,
+      },
     },
   },
 };

@@ -5,6 +5,7 @@ import VorpPet from "../components/feature/VorpAchievement/VorpPet";
 import VorpControls from "../components/feature/VorpAchievement/VorpControls";
 import VorpSleep from "../components/feature/VorpAchievement/VorpSleep";
 import VorpRead from "../components/feature/VorpAchievement/VorpRead";
+import VorpEat from "../components/feature/VorpAchievement/VorpEat";
 import BtnVropGame from "../components/buttons/BtnVropGame";
 import BtnPlayAgain from "../components/buttons/BtnPlayAgain";
 import { AnimatePresence } from "framer-motion";
@@ -83,6 +84,7 @@ const Vorp = () => {
           )}
           {currentAction.animation === "sleepActionAnim" && <VorpSleep />}
           {currentAction.animation === "readActionAnim" && <VorpRead />}
+          {currentAction.animation === "eatActionAnim" && <VorpEat />}
         </div>
         <VorpControls
           startGame={startGame}
