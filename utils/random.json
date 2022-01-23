@@ -1,0 +1,232 @@
+[
+  {
+    "tags": ["famous-quotes"],
+    "_id": "J1amO36TwbX8",
+    "content": "You can't blame gravity for falling in love.",
+    "author": "Albert Einstein",
+    "authorSlug": "albert-einstein",
+    "length": 44,
+    "dateAdded": "2021-05-12",
+    "dateModified": "2021-05-12"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "Log-YUXR2i-",
+    "content": "Truth is powerful and it prevails.",
+    "author": "Sojourner Truth",
+    "authorSlug": "sojourner-truth",
+    "length": 34,
+    "dateAdded": "2021-05-12",
+    "dateModified": "2021-05-12"
+  },
+  {
+    "tags": ["wisdom"],
+    "_id": "l7UNABW6dA2",
+    "content": "Silence is the sleep that nourishes wisdom.",
+    "author": "Francis Bacon",
+    "authorSlug": "francis-bacon",
+    "length": 43,
+    "dateAdded": "2021-05-12",
+    "dateModified": "2021-05-12"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "UMuvzCL1lau",
+    "content": "Fears are nothing more than a state of mind.",
+    "author": "Napoleon Hill",
+    "authorSlug": "napoleon-hill",
+    "length": 44,
+    "dateAdded": "2021-05-07",
+    "dateModified": "2021-05-07"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "0KzOsnrddItt",
+    "content": "Nothing will work unless you do.",
+    "author": "Maya Angelou",
+    "authorSlug": "maya-angelou",
+    "length": 32,
+    "dateAdded": "2021-05-07",
+    "dateModified": "2021-05-07"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "bG4HRWkKCZ6",
+    "content": "He that is giddy thinks the world turns round.",
+    "author": "William Shakespeare",
+    "authorSlug": "william-shakespeare",
+    "length": 46,
+    "dateAdded": "2021-05-07",
+    "dateModified": "2021-05-07"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "U3JBbXpUnIoF",
+    "content": "A jug fills drop by drop.",
+    "author": "Buddha",
+    "authorSlug": "buddha",
+    "length": 25,
+    "dateAdded": "2021-05-05",
+    "dateModified": "2021-05-05"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "Fk_kOv_a_9r",
+    "content": "What worries you masters you.",
+    "author": "Haddon Robinson",
+    "authorSlug": "haddon-robinson",
+    "length": 29,
+    "dateAdded": "2021-05-05",
+    "dateModified": "2021-05-05"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "_eNo_ZJ4ggNS",
+    "content": "The beginning is always today.",
+    "author": "Mary Wollstonecraft",
+    "authorSlug": "mary-wollstonecraft",
+    "length": 30,
+    "dateAdded": "2021-05-05",
+    "dateModified": "2021-05-05"
+  },
+  {
+    "tags": ["friendship"],
+    "_id": "64iqW6Q_Bg",
+    "content": "A friend is, as it were, a second self.",
+    "author": "Cicero",
+    "authorSlug": "cicero",
+    "length": 39,
+    "dateAdded": "2021-05-05",
+    "dateModified": "2021-05-05"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "IxrwsheO2w6",
+    "content": "Wherever you go, go with all your heart.",
+    "author": "Confucius",
+    "authorSlug": "confucius",
+    "length": 40,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2021-04-23"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "RrK_kU3Fjf0",
+    "content": "Yesterday's home runs don't win today's games.",
+    "author": "Babe Ruth",
+    "authorSlug": "babe-ruth",
+    "length": 46,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2022-01-07"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "P77hDIkrjYP",
+    "content": "Study the past, if you would divine the future.",
+    "author": "Confucius",
+    "authorSlug": "confucius",
+    "length": 47,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2021-04-23"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "OY_FmDtw10XY",
+    "content": "Love is a serious mental disease.",
+    "author": "Plato",
+    "authorSlug": "plato",
+    "length": 33,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2021-04-23"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "ITSWNEMYeJ2",
+    "content": "Our distrust is very expensive.",
+    "author": "Ralph Waldo Emerson",
+    "authorSlug": "ralph-waldo-emerson",
+    "length": 31,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2021-04-23"
+  },
+  {
+    "tags": ["friendship"],
+    "_id": "aawMV6-S9",
+    "content": "The friendship that can cease has never been real.",
+    "author": "Jerome",
+    "authorSlug": "jerome",
+    "length": 50,
+    "dateAdded": "2021-04-23",
+    "dateModified": "2021-04-23"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "6QtdBlEU_0hU",
+    "content": "Excellence is not a skill. It is an attitude.",
+    "author": "Ralph Marston",
+    "authorSlug": "ralph-marston",
+    "length": 45,
+    "dateAdded": "2021-04-15",
+    "dateModified": "2021-04-15"
+  },
+  {
+    "tags": ["wisdom"],
+    "_id": "hpodweiyG1",
+    "content": "Not engaging in ignorance is wisdom.",
+    "author": "Bodhidharma",
+    "authorSlug": "bodhidharma",
+    "length": 36,
+    "dateAdded": "2021-04-15",
+    "dateModified": "2021-04-15"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "h8BL2VGEZfK",
+    "content": "There is no failure except in no longer trying.",
+    "author": "Elbert Hubbard",
+    "authorSlug": "elbert-hubbard",
+    "length": 47,
+    "dateAdded": "2021-04-15",
+    "dateModified": "2021-04-15"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "KsySq34Vlt3",
+    "content": "There is no greater harm than that of time wasted.",
+    "author": "Michelangelo",
+    "authorSlug": "michelangelo",
+    "length": 50,
+    "dateAdded": "2021-04-15",
+    "dateModified": "2021-04-15"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "XhtgckYtfGz",
+    "content": "Ideas are the beginning points of all fortunes.",
+    "author": "Napoleon Hill",
+    "authorSlug": "napoleon-hill",
+    "length": 47,
+    "dateAdded": "2021-04-15",
+    "dateModified": "2021-04-15"
+  },
+  {
+    "tags": ["famous-quotes"],
+    "_id": "iATG4bx96uc8",
+    "content": "You teach best what you most need to learn.",
+    "author": "Richard Bach",
+    "authorSlug": "richard-bach",
+    "length": 43,
+    "dateAdded": "2021-04-08",
+    "dateModified": "2021-04-08"
+  },
+  {
+    "tags": ["wisdom"],
+    "_id": "ZqHAX7IvZk",
+    "content": "If you want to go east, don't go west.",
+    "author": "Ramakrishna",
+    "authorSlug": "ramakrishna",
+    "length": 38,
+    "dateAdded": "2021-04-08",
+    "dateModified": "2021-04-08"
+  }
+]

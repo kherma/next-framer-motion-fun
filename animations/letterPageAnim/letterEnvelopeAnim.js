@@ -6,7 +6,7 @@ export const letterTopAnim = (toggleAnimation) => ({
     rotateX: toggleAnimation ? "180deg" : "0deg",
     transition: {
       rotateX: {
-        delay: toggleAnimation ? 0.5 : 0.5,
+        delay: toggleAnimation ? 0.5 : 1.1,
         duration: 0.5,
       },
     },
@@ -25,7 +25,7 @@ export const letterHeartAnim = (toggleAnimation) => ({
     rotate: toggleAnimation ? "-45deg" : "45deg",
     transition: {
       duration: 0.5,
-      delay: toggleAnimation ? 0 : 1,
+      delay: toggleAnimation ? 0 : 1.6,
     },
   },
 });
@@ -40,7 +40,7 @@ export const letterPageAnim = (toggleAnimation) => ({
     translateY: toggleAnimation ? "-70%" : "-20%",
     transition: {
       duration: 0.5,
-      delay: toggleAnimation ? 1 : 0,
+      delay: toggleAnimation ? 1 : 0.6,
     },
   },
 });
