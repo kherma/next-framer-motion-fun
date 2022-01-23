@@ -25,7 +25,7 @@ export const pagesData = {
   letter: {
     title: "Letter",
     description: "Animated love letter build with CSS and JavaScript.",
-    message: "",
+    message: "Animated CSS letter drawing with data fetching and pagination.",
     achievementDescription: "Open a letter",
   },
   fizzbuzz: {
