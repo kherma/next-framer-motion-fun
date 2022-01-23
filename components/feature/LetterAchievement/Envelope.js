@@ -11,7 +11,7 @@ const Envelope = ({ setToggleAnimation, toggleAnimation }) => {
     <div className="flex justify-center items-center w-full h-96 min-h-[24rem] sm:h-[35rem] xl:h-full">
       <motion.button
         onClick={() => setToggleAnimation((prev) => !prev)}
-        className="relative w-56 h-28 transition-transform duration-300 hover:scale-125 sm:scale-[2] sm:hover:scale-[2.2]"
+        className="relative w-56 h-28 transition-transform duration-300 hover:scale-[1.1] sm:scale-[2] sm:hover:scale-[2.1]"
       >
         <div className="absolute top-0 left-0 z-[1] w-full h-full bg-slate-600" />
         <motion.div
