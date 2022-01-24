@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { config } from "../../config/config";
 
 const AchievementsBar = () => {
-  const [achievements, setAchievements] = useState({ total: 6, achieved: 0 });
+  const [achievements, setAchievements] = useState({ total: 5, achieved: 0 });
 
   const handleUpdate = () => {
+    if (achievements.total === achievements.achieved) return;
     const newState = { ...achievements };
     newState.achieved += 1;
-    if (achievements.total === achievements.achieved) return;
     setAchievements((prev) => ({ ...prev, ...newState }));
   };
 
