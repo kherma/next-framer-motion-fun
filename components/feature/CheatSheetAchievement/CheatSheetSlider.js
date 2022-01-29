@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { slideAnim } from "../../../animations/cheatScheetAnim";
 
-const CheatSheetSlider = ({ innerData, position }) => {
+const CheatSheetSlider = ({ innerData, position, handlers }) => {
   return (
-    <ul className="overflow-hidden relative w-full h-96 xl:h-full">
+    <ul
+      {...handlers}
+      className="overflow-hidden relative w-full h-96 xl:h-full"
+    >
       {innerData.map((item, index) => {
         const { initial, animate, transition } = slideAnim(index, position);
         return (
