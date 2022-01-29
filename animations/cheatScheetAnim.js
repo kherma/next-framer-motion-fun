@@ -19,3 +19,20 @@ export const celestialAnim = (darkMode, variant) => ({
     delay: darkMode ? 0 : 0.3,
   },
 });
+
+export const slideAnim = (index, position) => ({
+  initial: {
+    rotation: -180,
+    scale: 0,
+  },
+  animate: {
+    rotation: 0,
+    scale: index === position ? 1 : 0.9,
+    left: `${5 + (index - position) * 87}%`,
+  },
+  transition: {
+    type: "spring",
+    stiffness: 200,
+    damping: 20,
+  },
+});
