@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import LetterButtons from "./LetterButtons";
 import LetterBtnAchievement from "./LetterBtnAchievement";
 import {

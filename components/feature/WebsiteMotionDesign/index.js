@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import ButtonsWMD from "./ButtonsWMD";
 import BoxesWMD from "./BoxesWMD";

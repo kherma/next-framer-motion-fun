@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { config } from "../../config/config";
 import BtnPageNavigation from "../buttons/BtnPageNavigation";

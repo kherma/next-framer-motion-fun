@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../../animations/btnScaleAnim";
 import { v4 as uuidv4 } from "uuid";

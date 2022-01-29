@@ -1,4 +1,3 @@
-import React from "react";
 import PlanetDescriptionBtnExplore from "./PlanetDescriptionBtnExplore";
 import PlanetDescriptionCounter from "./PlanetDescriptionCounter";
 import PlanetDescriptionBtnAchievement from "./PlanetDescriptionBtnAchievement";

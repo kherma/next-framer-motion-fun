@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMan } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import { populationAnim } from "../../../../animations/planetPageAnim/planetDataAnim";

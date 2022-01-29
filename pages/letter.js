@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Layout from "../components/layout/Layout";
 import Envelope from "../components/feature/LetterAchievement/Envelope";
 import LetterModal from "../components/feature/LetterAchievement/LetterModal";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PlanetView from "./PlanetView";
 import PlanetData from "./PlanetData";
 import PlanetAtmosphere from "./PlanetAtmosphere";

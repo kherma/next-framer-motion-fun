@@ -1,4 +1,3 @@
-import React from "react";
 import { btnScaleAnim } from "../../../animations/btnScaleAnim";
 import { motion } from "framer-motion";
 

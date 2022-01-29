@@ -1,4 +1,3 @@
-import React from "react";
 import BtnHomeLink from "../buttons/BtnHomeLink";
 import BtnInfo from "../buttons/BtnInfo";
 import PagePagination from "./PagePagination";
