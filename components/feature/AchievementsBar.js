@@ -13,7 +13,7 @@ const AchievementsBar = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center w-full ">
+    <div className="flex flex-col gap-8 justify-center items-center w-full">
       <h2 className="text-4xl font-black text-slate-800 uppercase md:text-5xl xl:text-4xl 2xl:text-5xl">
         badges
       </h2>
