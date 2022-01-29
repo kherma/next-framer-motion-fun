@@ -4,13 +4,14 @@ import CheatSheetNavbar from "../components/feature/CheatSheetAchievement/CheatS
 import CheatSheetSlider from "../components/feature/CheatSheetAchievement/CheatSheetSlider";
 import CheatSheetChangeSlide from "../components/feature/CheatSheetAchievement/CheatSheetChangeSlide";
 import { useSwipeable } from "react-swipeable";
+import { config } from "../config/config";
 
 const CheatSheet = () => {
   const [position, setPosition] = useState(0);
-  const innerData = [1, 2, 3, 4, 5, 6];
+  const { cheatSheetData } = config;
 
   const handleNext = () => {
-    if (position < innerData.length - 1) {
+    if (position < cheatSheetData.length - 1) {
       setPosition((prev) => prev + 1);
     }
   };
@@ -32,7 +33,7 @@ const CheatSheet = () => {
       <div className="flex flex-col w-full h-full font-mono bg-white dark:bg-black rounded-2xl transition-colors duration-300 ease-in-out">
         <CheatSheetNavbar />
         <CheatSheetSlider
-          innerData={innerData}
+          cheatSheetData={cheatSheetData}
           position={position}
           handlers={handlers}
         />
@@ -40,7 +41,7 @@ const CheatSheet = () => {
           handlePrev={handlePrev}
           handleNext={handleNext}
           position={position}
-          dataLength={innerData.length}
+          dataLength={cheatSheetData.length}
         />
       </div>
     </Layout>

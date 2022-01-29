@@ -26,7 +26,7 @@ const CheatSheetChangeSlide = ({
   ];
 
   return (
-    <div className="hidden overflow-hidden gap-2 justify-between items-center px-2 pt-2 pb-4 rounded-b-2xl xl:flex">
+    <div className="flex overflow-hidden gap-2 justify-between items-center px-2 pt-2 pb-4 rounded-b-2xl">
       {innerData.map(({ text, radius, handler, disabled }) => {
         const { whileHover, whileTap, transition } = btnScaleAnim(
           disabled,
