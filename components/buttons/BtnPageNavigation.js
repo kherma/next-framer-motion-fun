@@ -8,6 +8,7 @@ const BtnPageNavigation = ({ href, Icon }) => {
   return (
     <Link href={href} passHref={true}>
       <motion.a
+        aria-label={`Go to ${href.replace("/", "")}`}
         whileHover={whileHover}
         whileTap={whileTap}
         transition={transition}

@@ -20,6 +20,7 @@ const ModalWMD = ({ handleClose }) => (
       className="flex relative flex-col gap-4 justify-between items-center p-4 w-2/3 bg-gray-200 rounded-xl md:p-8 xl:w-2/3"
     >
       <button
+        aria-label="Close modal"
         onClick={handleClose}
         className="group relative w-full h-8 bg-bgRed-100 rounded-xl transition-all duration-500 sm:h-16 xl:bg-white xl:hover:bg-bgRed-100 paper"
       >

@@ -44,15 +44,12 @@ const Envelope = ({ setToggleAnimation, toggleAnimation }) => (
         animate="visible"
         className="absolute top-0 left-0 z-[4] border-x-[112px] border-t-[56px] border-x-transparent border-t-slate-500 origin-top"
       />
-      <motion.ul
+      <motion.div
         variants={letterHeartAnim(toggleAnimation)}
         initial="hidden"
         animate="visible"
         className="z-[5] w-4 h-4 bg-slate-700 absoluteCenter"
-      >
-        <li className="absolute -top-1/2 w-4 h-4 bg-inherit rounded-full" />
-        <li className="absolute -left-1/2 w-4 h-4 bg-inherit rounded-full" />
-      </motion.ul>
+      />
     </motion.button>
   </div>
 );

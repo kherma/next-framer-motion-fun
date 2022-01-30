@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { pageAnim } from "../../animations/pageAnim";
+import { AnimatePresence } from "framer-motion";
 import { config } from "../../config/config";
 import Head from "next/head";
 import Header from "./Header";
@@ -41,13 +40,9 @@ const Layout = ({ children, pageTitle }) => {
         />
 
         <div className="w-full h-full xl:w-1/2">
-          <motion.div
-            initial={pageAnim.initial}
-            animate={pageAnim.animate}
-            className="flex justify-center items-center w-full h-full"
-          >
+          <div className="flex justify-center items-center w-full h-full">
             {children}
-          </motion.div>
+          </div>
         </div>
       </main>
     </div>
