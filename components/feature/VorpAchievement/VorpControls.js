@@ -22,6 +22,7 @@ const VorpControls = ({
     <div className="flex justify-evenly items-center py-2 w-full sm:py-4 xl:py-2">
       {controlsData.map(({ Icon, action, time }) => (
         <motion.button
+          aria-label={`Make Vorp ${action.replace("ActionAnim", "")}`}
           disabled={isBtnDsiabled(true, action)}
           key={uuidv4()}
           onClick={() => handleActions(action, time)}

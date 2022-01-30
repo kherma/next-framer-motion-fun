@@ -6,6 +6,7 @@ const BtnExternalLink = ({ link, Icon, variant }) => {
   const { whileHover, whileTap, transition } = btnScaleAnim(false);
   return (
     <motion.a
+      aria-label={`Go to ${link.replace("/", "")}`}
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}

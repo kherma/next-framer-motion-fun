@@ -12,6 +12,7 @@ const LetterButtons = ({
   return (
     <div className="flex gap-4 justify-between items-center w-full sm:gap-8">
       <motion.button
+        aria-label="Go to previous quote"
         whileHover={whileHover}
         whileTap={whileTap}
         transition={transition}
@@ -22,6 +23,7 @@ const LetterButtons = ({
         <MdNavigateBefore className="w-8 h-8 sm:w-12 sm:h-12" />
       </motion.button>
       <motion.button
+        aria-label="Close modal"
         whileHover={whileHover}
         whileTap={whileTap}
         transition={transition}
@@ -31,6 +33,7 @@ const LetterButtons = ({
         <MdClose className="w-8 h-8 sm:w-12 sm:h-12" />
       </motion.button>
       <motion.button
+        aria-label="Go to next quote"
         whileHover={whileHover}
         whileTap={whileTap}
         transition={transition}

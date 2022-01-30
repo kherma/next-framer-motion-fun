@@ -32,6 +32,7 @@ const BtnEmailClipboard = () => {
   };
   return (
     <motion.button
+      aria-label="Copy email to clipboard"
       whileHover={whileHover}
       whileTap={whileTap}
       transition={transition}
