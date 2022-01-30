@@ -20,7 +20,11 @@ const CheatSheetCommand = ({ command }) => {
   return (
     <li className="text-xs text-black dark:text-white lowercase bg-white dark:bg-black transition-colors duration-300 ease-in-out sm:text-base xl:text-base 2xl:text-lg">
       <button
-        className="transition-colors duration-200 ease-in-out xl:hover:bg-neutral-200"
+        className={`${
+          !isCopied
+            ? "xl:hover:bg-neutral-200 xl:dark:hover:bg-neutral-700"
+            : "hover:bg-transparent"
+        }`}
         onClick={() => copyToClipboard(command)}
       >
         {isCopied ? (

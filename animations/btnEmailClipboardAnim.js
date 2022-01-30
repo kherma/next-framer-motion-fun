@@ -1,21 +1,19 @@
-export const emailClipboardAnima = (isActive) => {
-  return {
-    animate: isActive
-      ? {
-          rotate: 360,
-          opacity: [1, 0],
-        }
-      : {
-          opacity: 1,
-        },
-    transition: {
-      duration: 1,
-      opacity: {
-        duration: 0.75,
+export const emailClipboardAnima = (isActive) => ({
+  animate: isActive
+    ? {
+        rotate: 360,
+        opacity: [1, 0],
+      }
+    : {
+        opacity: 1,
       },
+  transition: {
+    duration: 1,
+    opacity: {
+      duration: 0.75,
     },
-  };
-};
+  },
+});
 
 export const emailCheckAnim = {
   initial: { opacity: 0 },
