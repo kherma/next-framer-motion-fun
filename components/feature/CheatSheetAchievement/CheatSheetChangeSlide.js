@@ -1,6 +1,3 @@
-import { motion } from "framer-motion";
-import { btnScaleAnim } from "../../../animations/btnScaleAnim";
-
 const CheatSheetChangeSlide = ({
   handleNext,
   handlePrev,
@@ -27,28 +24,18 @@ const CheatSheetChangeSlide = ({
 
   return (
     <div className="flex overflow-hidden gap-2 justify-between items-center px-2 pt-2 pb-4 rounded-b-2xl">
-      {innerData.map(({ text, radius, handler, disabled }) => {
-        const { whileHover, whileTap, transition } = btnScaleAnim(
-          disabled,
-          0.95,
-          1
-        );
-        return (
-          <motion.button
-            disabled={disabled}
-            whileHover={whileHover}
-            whileTap={whileTap}
-            transition={transition}
-            key={text}
-            onClick={handler}
-            className={`p-4 w-full dark:text-white uppercase dark:bg-black border ${radius} border-black dark:border-white ${
-              disabled ? "opacity-0" : "opacity-100"
-            } transition-all duration-300 ease-in-out xl:hover:text-white xl:dark:hover:text-black xl:hover:bg-black xl:dark:hover:bg-white`}
-          >
-            {text}
-          </motion.button>
-        );
-      })}
+      {innerData.map(({ text, radius, handler, disabled }) => (
+        <button
+          disabled={disabled}
+          key={text}
+          onClick={handler}
+          className={`p-4 w-full dark:text-white uppercase dark:bg-black border ${radius} border-black dark:border-white ${
+            disabled ? "opacity-0" : "opacity-100"
+          } transition-all duration-300 ease-in-out xl:hover:text-white xl:dark:hover:text-black xl:hover:bg-black xl:dark:hover:bg-white`}
+        >
+          {text}
+        </button>
+      ))}
     </div>
   );
 };
