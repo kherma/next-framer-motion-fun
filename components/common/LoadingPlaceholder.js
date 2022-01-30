@@ -3,14 +3,12 @@ import { BsFillGearFill } from "react-icons/bs";
 import { IoPlanet } from "react-icons/io5";
 import { WiBarometer } from "react-icons/wi";
 import {
-  placeholderEntryAnim,
   viewPlaceholderAnim,
   dataPlaceholderAnim,
   atmospherePlaceholderAnim,
 } from "../../animations/planetPageAnim/planetPlaceholderAnim";
 
 const LoadingPlaceholder = ({ variant, loading }) => {
-  const { animate: animateEntry } = placeholderEntryAnim;
   const {
     initial: viewInitial,
     animate: viewAnimate,
@@ -21,10 +19,7 @@ const LoadingPlaceholder = ({ variant, loading }) => {
   const { animate: atmosphereAnimate, transition: atmosphereTransition } =
     atmospherePlaceholderAnim(loading);
   return (
-    <motion.div
-      animate={animateEntry}
-      className="flex justify-center items-center w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full"
-    >
+    <div className="flex justify-center items-center w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full">
       {variant === "view" && (
         <motion.div
           initial={viewInitial}
@@ -53,7 +48,7 @@ const LoadingPlaceholder = ({ variant, loading }) => {
           <WiBarometer />
         </motion.div>
       )}
-    </motion.div>
+    </div>
   );
 };
 

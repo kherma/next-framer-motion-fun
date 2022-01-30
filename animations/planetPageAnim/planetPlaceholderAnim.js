@@ -1,7 +1,3 @@
-export const placeholderEntryAnim = {
-  animate: { scale: [0.5, 1] },
-};
-
 const placeholderTransition = {
   duration: 0.9,
   opacity: {

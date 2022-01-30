@@ -5,7 +5,6 @@ import PlanetDescriptionSummary from "./PlanetDescriptionSummary";
 import { motion } from "framer-motion";
 import { RiSpaceShipFill } from "react-icons/ri";
 import { descriptionPlaceholderAnim } from "../../../../animations/planetPageAnim/planetDescriptionAnim";
-import { placeholderEntryAnim } from "../../../../animations/planetPageAnim/planetPlaceholderAnim";
 
 const PlanetDescription = ({
   description,
@@ -16,12 +15,8 @@ const PlanetDescription = ({
   initialAnimation,
 }) => {
   const { animate, transition } = descriptionPlaceholderAnim(loading);
-  const { animate: animateEntry } = placeholderEntryAnim;
   return (
-    <motion.div
-      animate={animateEntry}
-      className="flex overflow-hidden flex-col w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full"
-    >
+    <div className="flex overflow-hidden flex-col w-full h-[21rem] text-white bg-black rounded-2xl sm:h-[22rem] xl:h-full">
       <div className="flex justify-between items-center">
         <PlanetDescriptionBtnExplore
           handleGeneratePlanet={handleGeneratePlanet}
@@ -46,7 +41,7 @@ const PlanetDescription = ({
       ) : (
         <PlanetDescriptionSummary name={name} description={description} />
       )}
-    </motion.div>
+    </div>
   );
 };
 
