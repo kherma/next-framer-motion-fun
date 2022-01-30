@@ -7,6 +7,8 @@ const BtnInfo = ({ handleOpen }) => {
 
   return (
     <motion.button
+      role="button"
+      aria-label="Open menu"
       onClick={handleOpen}
       whileHover={whileHover}
       whileTap={whileTap}

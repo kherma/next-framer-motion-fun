@@ -21,6 +21,8 @@ const BtnHomeLink = () => {
     >
       <Link href={link}>
         <a
+          role="button"
+          aria-label="Go to home page"
           className={`flex justify-center items-center w-full ${
             isActive && "cursor-default"
           }`}
