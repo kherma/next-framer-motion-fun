@@ -1,40 +1,41 @@
-import { useState, useEffect } from "react";
+import CheatSheetBtnAchievement from "./CheatSheetBtnAchievement";
 
-const CheatSheetCommand = ({ command }) => {
-  const [isCopied, setIsCopied] = useState(false);
-
-  const copyToClipboard = (command) => {
-    if (!isCopied) {
-      navigator.clipboard.writeText(command);
-      setIsCopied(true);
-    }
-    return;
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => isCopied && setIsCopied(false), 2000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [isCopied]);
-  return (
-    <li className="text-xs text-black dark:text-white lowercase bg-white dark:bg-black transition-colors duration-300 ease-in-out sm:text-base xl:text-base 2xl:text-lg">
+const CheatSheetCommand = ({ command, index, copied, handleCopied }) => (
+  <li className="text-xs text-black dark:text-white lowercase bg-white dark:bg-black transition-colors duration-300 ease-in-out sm:text-base xl:text-base 2xl:text-lg">
+    {command === "COPY ME!!!" ? (
+      copied ? (
+        <CheatSheetBtnAchievement />
+      ) : (
+        <button
+          disabled={copied}
+          className={`${
+            !copied
+              ? "xl:hover:bg-neutral-200 xl:dark:hover:bg-neutral-700"
+              : "hover:bg-transparent"
+          }`}
+          onClick={() => handleCopied(index)}
+        >
+          {command}
+        </button>
+      )
+    ) : (
       <button
+        disabled={copied}
         className={`${
-          !isCopied
+          !copied
             ? "xl:hover:bg-neutral-200 xl:dark:hover:bg-neutral-700"
             : "hover:bg-transparent"
         }`}
-        onClick={() => copyToClipboard(command)}
+        onClick={() => handleCopied(index)}
       >
-        {isCopied ? (
+        {copied ? (
           <span className="text-green-600">&#47;&#47; copied</span>
         ) : (
           command
         )}
       </button>
-    </li>
-  );
-};
+    )}
+  </li>
+);
 
 export default CheatSheetCommand;
