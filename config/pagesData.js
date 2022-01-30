@@ -29,9 +29,10 @@ export const pagesData = {
     achievementDescription: "Open a letter",
   },
   cheatsheet: {
-    title: "Git CheatSheet",
+    title: "CheatSheet",
     description: "Cheatsheet with GIT and GitHub commands.",
-    message: "",
-    achievementDescription: "Copy a command from cheatsheet",
+    message:
+      "Animated slider full of ready-to-copy commands for git and github.",
+    achievementDescription: "Copy correct command from cheatsheet",
   },
 };
