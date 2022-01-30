@@ -1,4 +1,3 @@
-import React from "react";
 import { MdNavigateBefore, MdNavigateNext, MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../../animations/btnScaleAnim";

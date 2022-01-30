@@ -1,5 +1,3 @@
-import React from "react";
-
 const BtnPlayAgain = ({ handleStart }) => (
   <button
     onClick={handleStart}

@@ -1,4 +1,3 @@
-import React from "react";
 import Backdrop from "./Backdrop";
 import { motion } from "framer-motion";
 import { modalAnim } from "../../animations/modalMenuAnim";

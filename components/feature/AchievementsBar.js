@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { config } from "../../config/config";
 
 const AchievementsBar = () => {
-  const [achievements, setAchievements] = useState({ total: 6, achieved: 0 });
+  const [achievements, setAchievements] = useState({ total: 5, achieved: 0 });
 
   const handleUpdate = () => {
+    if (achievements.total === achievements.achieved) return;
     const newState = { ...achievements };
     newState.achieved += 1;
-    if (achievements.total === achievements.achieved) return;
     setAchievements((prev) => ({ ...prev, ...newState }));
   };
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center w-full ">
+    <div className="flex flex-col gap-8 justify-center items-center w-full">
       <h2 className="text-4xl font-black text-slate-800 uppercase md:text-5xl xl:text-4xl 2xl:text-5xl">
         badges
       </h2>

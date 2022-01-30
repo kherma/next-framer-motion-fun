@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { BsFillGearFill } from "react-icons/bs";
 import { IoPlanet } from "react-icons/io5";

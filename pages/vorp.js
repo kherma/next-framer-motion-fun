@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../components/layout/Layout";
 import VorpStatus from "../components/feature/VorpAchievement/VorpStatus";
 import VorpPet from "../components/feature/VorpAchievement/VorpPet";

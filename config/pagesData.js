@@ -28,16 +28,11 @@ export const pagesData = {
     message: "Animated CSS letter drawing with data fetching and pagination.",
     achievementDescription: "Open a letter",
   },
-  fizzbuzz: {
-    title: "FizzBuzz",
-    description: "Automated FizzBuzz generator with visualization.",
-    message: "",
-    achievementDescription: "Play with FizzBuzz",
-  },
   cheatsheet: {
-    title: "Git CheatSheet",
+    title: "CheatSheet",
     description: "Cheatsheet with GIT and GitHub commands.",
-    message: "",
-    achievementDescription: "Copy a command from cheatsheet",
+    message:
+      "Animated slider full of ready-to-copy commands for git and github.",
+    achievementDescription: "Copy correct command from cheatsheet",
   },
 };

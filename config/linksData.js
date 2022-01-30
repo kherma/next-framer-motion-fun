@@ -36,5 +36,5 @@ export const linksData = {
     link: "https://tailwindcss.com/",
     Icon: SiTailwindcss,
   },
-  navLinks: ["/", "/planet", "/vorp", "/letter", "/fizzbuzz", "/cheatsheet"],
+  navLinks: ["/", "/planet", "/vorp", "/letter", "/cheatsheet"],
 };

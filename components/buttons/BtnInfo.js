@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { btnScaleAnim } from "../../animations/btnScaleAnim";

@@ -1,4 +1,3 @@
-import React from "react";
 import { CgArrowsHAlt } from "react-icons/cg";
 import { AnimatePresence, motion } from "framer-motion";
 import { distanceAnim } from "../../../../animations/planetPageAnim/planetDataAnim";

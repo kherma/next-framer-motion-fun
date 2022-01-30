@@ -1,4 +1,3 @@
-import React from "react";
 import BtnEmailClipboard from "../buttons/BtnEmailClipboard";
 
 const Footer = () => (
