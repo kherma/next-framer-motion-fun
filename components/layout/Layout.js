@@ -5,6 +5,8 @@ import Head from "next/head";
 import Header from "./Header";
 import Modal from "./Modal";
 import PageDescription from "./PageDescription";
+import AchievementsBar from "./AchievementsBar";
+import AchievementMessage from "./AchievementMessage";
 
 const Layout = ({ children, pageTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +24,7 @@ const Layout = ({ children, pageTitle }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 w-full h-full min-h-screen bg-gray-200 sm:gap-8 sm:p-8 xl:h-screen">
+    <div className="flex flex-col gap-4 p-4 w-full h-full min-h-screen bg-gray-200 sm:gap-8 sm:p-8">
       <Head>
         <title>{`${pagesData[pageTitle].title} ${titlePart}`}</title>
         <meta name="description" content={pagesData[pageTitle].description} />
@@ -32,17 +34,17 @@ const Layout = ({ children, pageTitle }) => {
         {isModalOpen && <Modal handleClose={close} />}
       </AnimatePresence>
       <Header handleOpen={open} />
-      <main className="flex flex-col gap-8 w-full h-full xl:flex-row">
+      <main className="grid grid-cols-1 gap-8 w-full h-full xl:grid-cols-5">
         <PageDescription
           title={pagesData[pageTitle].title}
           message={pagesData[pageTitle].message}
+        />
+        <AchievementsBar />
+        <AchievementMessage
           achievementDescription={pagesData[pageTitle].achievementDescription}
         />
-
-        <div className="w-full h-full xl:w-1/2">
-          <div className="flex justify-center items-center w-full h-full">
-            {children}
-          </div>
+        <div className="flex justify-center items-center w-full h-full xl:col-span-3 xl:min-h-[calc(100vh-208px)]">
+          {children}
         </div>
       </main>
     </div>

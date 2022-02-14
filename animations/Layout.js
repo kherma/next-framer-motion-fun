@@ -44,7 +44,7 @@ const Layout = ({ children, pageTitle }) => {
           <motion.div
             initial={pageAnim.initial}
             animate={pageAnim.animate}
-            className="flex flex-col gap-8 justify-center items-center w-full h-full xl:gap-4 2xl:gap-8"
+            className="flex flex-col gap-8 justify-center items-center w-full h-full xl:gap-8"
           >
             <AchievementMessage
               achievementDescription={
